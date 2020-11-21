@@ -94,6 +94,8 @@ print(imie)
 imie = "Tomek"
 print(imie)
 
+# PEP - Python Enhancements Proposal
+# PEP8 - style guide
 # nazywanie zmiennych: PEP8 https://www.python.org/dev/peps/pep-0008
 
 adres_zamieszkania = "ul. Polna 10, 12-345 Warszawa"
