@@ -190,7 +190,8 @@ print('-'*30)
 ########################################################################
 # instrukcje warunkowe
 
-liczba = int(input("Podaj liczbe: "))
+# liczba = int(input("Podaj liczbe: "))
+liczba = 10
 print(liczba)
 print("jestem przed ifem")
 
@@ -213,7 +214,8 @@ print("Papa")
 
 print('-'*30)
 
-liczba = int(input('Podaj liczbe: '))
+# liczba = int(input('Podaj liczbe: '))
+liczba = 10
 
 # czy jest z zakresu od 0 do 10
 if liczba >= 0 and liczba <= 10:
@@ -226,4 +228,19 @@ if 0 <= liczba <= 10:
     print("Liczba od 0 do 10!!!")
 else:
     print("Liczba spoza zakresu!")
+
+
+print('-'*30)
+
+########################################################################
+
+# Petle
+# while
+
+i = 0
+while i < 100:
+    print(i)
+    i += 1
+
+print("Jestem poza petla")
 
