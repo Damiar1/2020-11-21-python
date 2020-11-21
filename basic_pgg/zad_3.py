@@ -9,3 +9,19 @@ Cena za kg: 10.0
 Waga: 2.5
 Należność: 25.0
 """
+
+cena = float(input("Podaj cene: "))
+waga = float(input("Podaj wage: "))
+naleznosc = cena * waga
+
+print("Cena za kg:", cena, "zł")
+print("Waga:", waga, "kg")
+print("Należność:", naleznosc, "zł")
+
+print("Cena za kg: " + str(cena) + " zł")
+print("Waga: " + str(waga) + " kg")
+print("Należność: " + str(naleznosc) + " zł")
+
+print(f"Cena za kg: {cena} zł")
+print(f"Waga: {waga} kg")
+print(f"Należność: {naleznosc} zł")
