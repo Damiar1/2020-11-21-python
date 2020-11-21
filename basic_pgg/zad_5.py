@@ -11,3 +11,10 @@ Mniejsza równa 15: True
 Podzielna przez 2: False
 """
 
+liczba = int(input("Podaj liczbę: "))
+
+print()
+print(f"Wieksza od 10: {liczba > 10}")
+print(f"Miejsza rowna 15 {liczba <= 15}")
+print(f"Podzielna przez 2: {liczba % 2 == 0}")
+
