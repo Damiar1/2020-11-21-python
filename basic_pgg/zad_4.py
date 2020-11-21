@@ -15,5 +15,12 @@ Koszt przejazdu Warszawa-Gdańsk to 105 PLN
 dystans - x
 """
 
+miasto_a = input("Podaj miasto A: ")
+miasto_b = input("Podaj miasto B: ")
+dystans = int(input(f"Podaj dystans na trasie {miasto_a}-{miasto_b}: "))
+cena_paliwa = float(input("Cena paliwa: "))
+spalanie = float(input("Spalanie na 100 km: "))
 
+koszt = dystans / 100 * spalanie * cena_paliwa
 
+print(f'Koszt przejazdu {miasto_a}-{miasto_b} to {koszt:.2f} PLN')
