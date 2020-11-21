@@ -113,3 +113,76 @@ waga = 123.456
 print(f"Waga: {waga}")
 print(f"Waga: |{waga:_^10.2f}|")
 
+moj_napis = f"Waga: |{waga:_^10.2f}|"
+print(moj_napis)
+
+print('-'*30)
+
+############################################################
+
+# Python jest językiem słabo typowanym (weakly types)
+# w przeciwienstwie do jezykow scisle typowanych (strongly typed) jak np. Java
+
+imie = "Piotr"
+print(imie)
+
+imie = 44.444
+print(imie)
+
+imie = 44
+print(imie)
+
+############################################################
+print('-'*30)
+
+liczba = 10
+print(liczba)
+
+liczba = liczba + 5
+print(liczba) # -> 15
+
+# = -> to jest przypisania
+
+wiek = 10
+wiek += 5 # to jest rownowazne wiek = wiek + 5
+print(wiek)
+wiek -= 5
+wiek *= 5
+wiek /= 5
+wiek //= 5
+
+# w jezykach takicj jak PHP, Java, C#
+# mozna zamiast liczba += 1 napisac liczba++
+wiek2 = 10
+wiek2 **= 2
+print(wiek2)
+
+wiek3 = 10
+wiek3 %= 3
+print(wiek3)
+
+############################################################
+print('-'*30)
+
+# Operatory porównania
+print(1 == 1) # zeby sie niepomylic: porownanie == a przypisanie =
+print(1 != 1) # rozne od
+print(1 < 2) # True
+print(1 > 2) # False
+print(1 > 1) # False
+print(1 < 1) # False
+print(1 <= 1) # True
+print(1 >= 1) # True
+
+# takie porownywanie nie za bardzo jest przydatne
+print('a' < 'b') # True
+print('c' < 'b') # False
+
+print('ala' == 'ala') # True
+print('ala' == 'Ala') # False
+print('ala ' == 'ala') # False
+print('ala' != 'krysia') # True
+
+print('Alibaba' < 'Alibac') # True
+
+
