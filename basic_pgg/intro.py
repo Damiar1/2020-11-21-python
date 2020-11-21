@@ -185,4 +185,45 @@ print('ala' != 'krysia') # True
 
 print('Alibaba' < 'Alibac') # True
 
+print('-'*30)
+
+########################################################################
+# instrukcje warunkowe
+
+liczba = int(input("Podaj liczbe: "))
+print(liczba)
+print("jestem przed ifem")
+
+if liczba == 10:
+    print("Jestem w if")
+    print("Brawo! Wygrales!! Podales liczbe 10")
+elif liczba == 20:
+    print("Jestem w elif")
+    print('Hoho! Podales 20!')
+elif liczba == 30:
+    print("Jestem w elif 2")
+    print('Hoho! Podales 30!')
+else:
+    print("Jestem w else")
+    print("Niestety nie wygrales")
+
+print("Jestem poza ifem")
+print("Papa")
+
+
+print('-'*30)
+
+liczba = int(input('Podaj liczbe: '))
+
+# czy jest z zakresu od 0 do 10
+if liczba >= 0 and liczba <= 10:
+    print("Liczba od 0 do 10!!!")
+else:
+    print("Liczba spoza zakresu!")
+
+
+if 0 <= liczba <= 10:
+    print("Liczba od 0 do 10!!!")
+else:
+    print("Liczba spoza zakresu!")
 
