@@ -102,3 +102,14 @@ adres_zamieszkania = "ul. Polna 10, 12-345 Warszawa"
 
 napis_z_polskimi_znakami = "Zażółć gęślą jaźń"
 print(napis_z_polskimi_znakami)
+
+print('-' * 30)
+
+# format specifiers
+# https://www.python.org/dev/peps/pep-0498/#format-specifiers
+# https://docs.python.org/3.4/library/string.html#formatspec
+
+waga = 123.456
+print(f"Waga: {waga}")
+print(f"Waga: |{waga:_^10.2f}|")
+
