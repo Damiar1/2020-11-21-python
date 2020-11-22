@@ -161,4 +161,40 @@ print('-' * 30)
 
 for i in range(-10, 10, 2):
     print(i)
-    
+
+print('-' * 30)
+
+# Petla for z dostepem do indeksu i wartosci
+
+imiona = ['Ala', 'Krysia', 'Tomek', 'Piotr']
+
+# klucz, wartosc
+# nazwy zmiennych tymczasowych moga byc dowolne
+for indeks, imie in enumerate(imiona):
+    print(f'indeks={indeks}, imie={imie}')
+
+print('-' * 30)
+
+# Zamien wartosci w zmiennych miejscami
+a = 10
+b = 20
+print(a, b)
+
+# z uzyciem zmiennej dodatkowej
+kopia_a = a
+a = b
+b = kopia_a
+
+print(a, b) # 20, 10
+
+print('-' * 30)
+
+a = 10
+b = 20
+
+print(a, b)
+
+a, b = b, a
+
+print(a, b)
+
