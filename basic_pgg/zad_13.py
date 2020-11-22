@@ -31,6 +31,10 @@ while True:
         print("Niepoprawny ruch!")
         continue
 
-
+    # if gracz_x < 0 or gracz_x > 10 or gracz_y < 0 or gracz_y > 10:
+    if not (0 <= gracz_x <= 10) or not (0 <= gracz_y <= 10):
+        print("Jestes poza plansza! GAME OVER!")
+        # break # to przerwie petle, po petli nic nie ma, wiec jest OK
+        exit() # zamknie caly program, jezeli cos jest po petli while to sie nie wykona!
 
 
