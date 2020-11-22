@@ -107,3 +107,20 @@ print(liczby)
 
 liczby.extend([111, 222, 333]) # dopisuje elementy na koncu listy
 print(liczby)
+
+# do usuwania elementow z listy uzywamy funkcji del()
+# i dodatkowo operatora dostępu
+del(liczby[0])
+print(liczby)
+print(liczby[0])
+
+del(liczby[1:4])
+print(liczby)
+
+print('-'*30)
+
+# sortowanie
+literki = ['z', 'r', 'a', 'c']
+print(literki)
+literki.sort()
+print(literki)
