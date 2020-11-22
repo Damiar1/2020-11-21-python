@@ -37,6 +37,7 @@ while True:
         continue
 
     liczba_krokow += 1
+    odleglosc_po_ruchu = sqrt((skarb_x-gracz_x)**2 + (skarb_y-gracz_y)**2)
 
     # if gracz_x < 0 or gracz_x > 10 or gracz_y < 0 or gracz_y > 10:
     if not (0 <= gracz_x <= 10) or not (0 <= gracz_y <= 10):
@@ -48,3 +49,8 @@ while True:
         print('Brawo! Znalazles skarb!!!')
         print(f'Liczba krokow to {liczba_krokow}')
         exit()
+
+    if odleglosc_po_ruchu < odleglosc_przed_ruchem:
+        print("Ciepło")
+    else:
+        print("Zimno")
