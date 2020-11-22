@@ -3,7 +3,6 @@
 # Tupla, krotka, tuple
 
 #    0   1   2 - indeks
-from _openssl.lib import sk_POLICYINFO_new_null
 
 a = (10, 20, 30)
 print(a)
@@ -126,3 +125,24 @@ literki = ['z', 'r', 'a', 'c']
 print(literki)
 literki.sort()
 print(literki)
+
+print('-' * 30)
+
+# Petla for
+
+liczby = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+i = 0
+while i < len(liczby):
+    print(f'Element listy: {liczby[i]}')
+    i += 1
+
+print('-' * 30)
+
+for x in liczby:
+    print(f'Element listy: {x}')
+
+
+
+
+
