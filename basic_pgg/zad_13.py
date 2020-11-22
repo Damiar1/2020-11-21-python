@@ -8,6 +8,7 @@ Dodatkowo:
 - po wykonaniu większej liczby kroków niż dwukrotność minimalnej liczby kroków umieść skarb w nowym miejscu,
 - z prawdopodobieństwem 1/5 nie podawaj graczowi wskazówki po wykonaniu kroku.
 """
+from math import sqrt
 
 gracz_x = 5
 gracz_y = 5
@@ -18,6 +19,8 @@ skarb_y = 7
 liczba_krokow = 0
 
 while True:
+    odleglosc_przed_ruchem = sqrt((skarb_x-gracz_x)**2 + (skarb_y-gracz_y)**2)
+
     print(f'Twoja pozycja: x={gracz_x} y={gracz_y}')
     kierunek = input("Podaj kierunek (w, s, a, d): ")
 
