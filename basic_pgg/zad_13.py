@@ -9,12 +9,13 @@ Dodatkowo:
 - z prawdopodobieństwem 1/5 nie podawaj graczowi wskazówki po wykonaniu kroku.
 """
 from math import sqrt
+from random import randint
 
-gracz_x = 5
-gracz_y = 5
+gracz_x = randint(0, 10)
+gracz_y = randint(0, 10)
 
-skarb_x = 7
-skarb_y = 7
+skarb_x = randint(0, 10)
+skarb_y = randint(0, 10)
 
 liczba_krokow = 0
 
