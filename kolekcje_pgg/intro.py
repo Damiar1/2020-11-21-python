@@ -3,6 +3,8 @@
 # Tupla, krotka, tuple
 
 #    0   1   2 - indeks
+from _openssl.lib import sk_POLICYINFO_new_null
+
 a = (10, 20, 30)
 print(a)
 print( a[1] ) # 20
