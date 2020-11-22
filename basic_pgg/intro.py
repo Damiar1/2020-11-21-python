@@ -247,7 +247,8 @@ print('-'*30)
 ########################################################################
 
 while True:
-    liczba = int(input("Podaj liczbe: "))
+    # liczba = int(input("Podaj liczbe: "))
+    liczba = 6
     print(f'Twoja liczba to {liczba}')
 
     if liczba % 2 == 0:
@@ -255,6 +256,9 @@ while True:
         break
 
 print('Jestem poza petla while')
+
+print('-'*30)
+########################################################################
 
 
 
