@@ -243,5 +243,62 @@ print(napis.find('z')) # jak nie znajdzie, to zwraca -1
 print(napis.replace('a', '*'))
 print(napis.replace('kot', '******'))
 
+print('-' * 30)
 
+# Slownik, dictionary, dict
 
+slownik = {
+    'imie': 'Piotr',
+    'nazwisko': 'GG',
+    'wiek': 18,
+    'czy_pelnoletni': True,
+    'ulubione_ksiazki': ['Pan Tadeusz', 'Konopielka'],
+    1: 123,
+    False: 555,
+    (1,2): 999
+}
+
+print(type(slownik))
+
+# odwolywanie sie do elementow slownika przez operator dostepu
+print(slownik['imie'])
+print(slownik['nazwisko'])
+print(slownik['wiek'])
+print(slownik['czy_pelnoletni'])
+print(slownik['ulubione_ksiazki'][0])
+print(slownik[1])
+print(slownik[False])
+print(slownik[(1,2)])
+
+# odwlywanie sie do elementow slownik przez metode .get()
+print(slownik.get('imie'))
+# print(slownik['nr_buta']) # bedzie wyjatek KeyError
+print(slownik.get('nr_buta')) # bedzie None
+print(slownik.get('nr_buta', 40))
+
+slownik['kolor_wlosow'] = 'blond'
+print(slownik)
+
+print('-' * 30)
+
+# standardowa iteracja po slowniku to iteracja po kluczach
+for klucz in slownik:
+    print(klucz)
+    print(slownik[klucz])
+
+print('-' * 30)
+
+print(slownik.keys())
+print(slownik.values())
+
+for wartosc in slownik.values():
+    print(wartosc)
+
+print('-' * 30)
+
+print(slownik.items())
+
+for klucz, wartosc in slownik.items():
+    print(f'{klucz} => {wartosc}')
+
+    
