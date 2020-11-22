@@ -198,3 +198,50 @@ a, b = b, a
 
 print(a, b)
 
+print('-' * 30)
+
+# Napisy
+
+napis = "Ala ma kota a kot ma kompilator"
+print(napis)
+print(napis[0])
+print(napis[1:3])
+print(napis[::-1])
+
+# wszystkie dzialania zwiazane z operatorem dostepu/wycinania
+# jak w listach i tuplach sa rowniez dostepne w napisach (stringach)
+
+print(napis.lower())
+print(napis.upper())
+print(napis.title())
+print(napis.capitalize())
+
+# dzielenie napisu
+print(napis.split())
+print(napis.split(' '))
+print(napis.split('a'))
+
+print('-' * 30)
+
+# laczenie napisow jakims znakiem
+podzielony_napis = napis.split(' ')
+print(podzielony_napis)
+
+po_scaleniu = '<->'.join(podzielony_napis)
+print(po_scaleniu)
+
+print('-' * 30)
+
+print(napis.count('a')) # zlicza wystapienia znaku w napisie
+print(napis.index('a')) # indeks pierwszego wystapienia napisu
+print(napis.find('a')) # indeks pierwszego wystapienia napisu
+
+# czym sie rozni index od find?
+# print(napis.index('z')) # rzuca wyjatek kiedy nie znajdzie przekazanego ciagu znakow w orginalnym napisie
+print(napis.find('z')) # jak nie znajdzie, to zwraca -1
+
+print(napis.replace('a', '*'))
+print(napis.replace('kot', '******'))
+
+
+
