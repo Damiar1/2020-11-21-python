@@ -15,6 +15,8 @@ gracz_y = 5
 skarb_x = 7
 skarb_y = 7
 
+liczba_krokow = 0
+
 while True:
     print(f'Twoja pozycja: x={gracz_x} y={gracz_y}')
     kierunek = input("Podaj kierunek (w, s, a, d): ")
@@ -31,10 +33,15 @@ while True:
         print("Niepoprawny ruch!")
         continue
 
+    liczba_krokow += 1
+
     # if gracz_x < 0 or gracz_x > 10 or gracz_y < 0 or gracz_y > 10:
     if not (0 <= gracz_x <= 10) or not (0 <= gracz_y <= 10):
         print("Jestes poza plansza! GAME OVER!")
         # break # to przerwie petle, po petli nic nie ma, wiec jest OK
         exit() # zamknie caly program, jezeli cos jest po petli while to sie nie wykona!
 
-
+    if gracz_x == skarb_x and gracz_y == skarb_y:
+        print('Brawo! Znalazles skarb!!!')
+        print(f'Liczba krokow to {liczba_krokow}')
+        exit()
