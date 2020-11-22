@@ -231,7 +231,6 @@ else:
 
 
 print('-'*30)
-
 ########################################################################
 
 # Petle
@@ -243,4 +242,28 @@ while i < 100:
     i += 1
 
 print("Jestem poza petla")
+
+print('-'*30)
+########################################################################
+
+while True:
+    liczba = int(input("Podaj liczbe: "))
+    print(f'Twoja liczba to {liczba}')
+
+    if liczba % 2 == 0:
+        print("Podales liczbe parzysta, konczymy petle")
+        break
+
+print('Jestem poza petla while')
+
+
+
+
+
+
+
+
+
+
+
 
