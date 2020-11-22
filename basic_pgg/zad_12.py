@@ -6,3 +6,22 @@ Daj użytkownikowi możliwość zakończenia wprowadzania liczb odpowiednią kom
 Zadbaj o obsłużenie przypadku gdy użytkownik nie wprowadzi żadnej liczby.
 """
 
+znalezione_minimum = None
+znalezione_maksimum = None
+
+while True:
+    dane_wejsciowe = input("Podaj liczbe lub wpisz KONIEC: ")
+    if dane_wejsciowe == "KONIEC":
+        break
+
+    liczba = int(dane_wejsciowe)
+    if znalezione_minimum is None or liczba < znalezione_minimum:
+        znalezione_minimum = liczba
+
+    if znalezione_maksimum is None or liczba > znalezione_maksimum:
+        znalezione_maksimum = liczba
+
+print(f'Znalezione minimum: {znalezione_minimum}')
+print(f'Znalezione maksimum: {znalezione_maksimum}')
+
+
