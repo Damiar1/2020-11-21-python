@@ -78,4 +78,32 @@ print(k)
 l = i * 5
 print(l)
 
+print('-'*30)
+###################################################
+# Listy
 
+liczby = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+print(type(liczby))
+
+# operator [] (dostępu, wycinania) działa dokładnie tak samo jak w tupli
+
+liczby[0] = 11 # operator przypisania działa w listach
+print(liczby)
+
+# liczby[10] = 110 # IndexError: list assignment index out of range
+
+liczby.append(110) # doklada element na koniec listy
+print(liczby)
+print(liczby[10])
+
+liczby.insert(1, 12) # wstawia 12 na indeks 1, pozostale elementy przesuwa
+print(liczby)
+
+liczby[0:2] = [1, 2]
+print(liczby)
+
+liczby[0:2] = [1, 2, 3]
+print(liczby)
+
+liczby.extend([111, 222, 333]) # dopisuje elementy na koncu listy
+print(liczby)

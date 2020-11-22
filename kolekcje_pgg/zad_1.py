@@ -18,3 +18,5 @@ print(liczby[-2])
 print(liczby[2:7])
 print(liczby[::3])
 print(liczby[::-2])
+
+print(liczby[0:5][::-1]) # od 1 do 5 odwrotnie
