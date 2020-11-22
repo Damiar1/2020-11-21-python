@@ -19,6 +19,17 @@ while True:
     print(f'Twoja pozycja: x={gracz_x} y={gracz_y}')
     kierunek = input("Podaj kierunek (w, s, a, d): ")
 
+    if kierunek == 'w':
+        gracz_y += 1
+    elif kierunek == 's':
+        gracz_y -= 1
+    elif kierunek == 'a':
+        gracz_x -= 1
+    elif kierunek == 'd':
+        gracz_x += 1
+    else:
+        print("Niepoprawny ruch!")
+        continue
 
 
 
