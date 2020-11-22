@@ -142,7 +142,23 @@ print('-' * 30)
 for x in liczby:
     print(f'Element listy: {x}')
 
+print('-' * 30)
 
+# Funckja range()
+# range(do) - prawostronnie otwarta
+# range(od, do) - lewostronnie zamknięta, prawostronnie otwary
+# range(od, do, co_ile) - lewostronnie zamknięta, prawostronnie otwarty z krokiem co_ile
 
+for i in range(10):
+    print(i)
 
+print('-' * 30)
 
+for i in range(-10, 10):
+    print(i)
+
+print('-' * 30)
+
+for i in range(-10, 10, 2):
+    print(i)
+    
