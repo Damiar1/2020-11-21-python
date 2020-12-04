@@ -45,18 +45,19 @@ https://en.wikipedia.org/wiki/List_of_Python_software
 ### GIT
 w tym momencie najpopularniejszy
 gdzie możemy przechowywać projekty oparte o GIT
-github.com
-https://bitbucket.org/
+* https://github.com
+* https://bitbucket.org/
+* i inne
 ### SVN
 Subversion, dość rzadko wykorzystywany
 ### CVS
 najstarsze narzędzie, coraz rzadziej wykorzystywane
 
-
 # Podstawowe operacje
 
-# Print
+## Print
 służy do wyświetlania czegoś na ekranie
+
 jest to funkcja, która wygląda w taki sposób
 
     print(“Hello world!”)
@@ -76,7 +77,7 @@ uruchomienie:
 
 ## Nazewnictwo zmiennych
 * nie używam polskich znaków
-* nie używam spacji, zamiast nich używam znaku podkreślenia (_)
+* nie używam spacji, zamiast nich używam znaku podkreślenia (`_`)
     * `pole_trapezu` - tak nazywamy zmienne w Pythonie
     * `poleTrapezu` - tak nie robimy w pythonie, ale w innych językach programowania często tak się robi
 
@@ -95,28 +96,36 @@ https://docs.python.org/3.8/library/string.html#formatspec
 
 ## Operatory
 ### operatory arytmetyczne
-wynikiem ich działania jest `int` albo `float`
+* wynikiem ich działania jest `int` albo `float`
 
-`+, -, *, /, //, %, **`
+* `+`, `-`, `*`, `/`, `//`, `%`, `**`
 
 ### operatory działające z `str`
-`+` - konkatenacja
-`*` - powielanie napisu
+* `+` - konkatenacja
+* `*` - powielanie napisu
 
 ### operatory porównania
-wynikiem ich działania jest `bool`, czyli `True` albo `False`
+* wynikiem ich działania jest `bool`, czyli `True` albo `False`
 
-`==, !=, <, >, <=, >=`
+* `==`, `!=`, `<`, `>`, `<=`, `>=`
 
 ### operatory przypisania
-`=, +=, -=, *=, /=, //=` i inne
+* proste przypisanie: `=`
+* przypisanie bazujące na obecnej wartości: `+=`, `-=`, `*=`, `/=`, `//=` i inne
 
 ### operatory logiczne
-koniunkcja (logiczne i) - `and`
-alternatywa (logiczne lub) - `or `
-negacja, zaprzeczenie (logiczne nie) - `not`
-`not True` -> `False`
-`not False` -> `True`
+* koniunkcja (logiczne i) - `and`
+* alternatywa (logiczne lub) - `or `
+* negacja, zaprzeczenie (logiczne nie) - `not`
+    * `not True` -> `False`
+    * `not False` -> `True`
+
+| A | B | A and B | A or B |
+|:-:|:-:|:-------:|:------:|
+| 0 | 0 |    0    |    0   |
+| 0 | 1 |    0    |    1   |
+| 1 | 0 |    0    |    1   |
+| 1 | 1 |    1    |    1   |
 
 ## Instrukcja warunkowa `if`
 ```
@@ -178,27 +187,26 @@ elif warunek2:
 * najpierw sprawdzamy warunek, później wykonujemy ciało pętli
 
 ## Kolekcje
-indeksowanie 
-https://drive.google.com/open?id=14F0mhrv-KGCQm9VtOM4PWJzFf4rJdji- 
-https://realpython.com/python-lists-tuples/ 
+* indeksowanie: https://realpython.com/python-lists-tuples/ 
 
 ### Tupla, krotka (ang. tuple)
-* definiujemy w `( )`
+* definiujemy w `( )` lub `tuple( )`
 * tupli po utworzeniu NIE możemy zmodyfikować, tupla jest **niemutowalna**
 * to oznacza, że przy próbie użycia operatora przypisania dostaniemy błąd
 * Do czego używamy tupli? Używamy do trzymania danych heterogeniczne.
 * tupla jest uporządkowana, tzn. zachowuje porządek, w jakim zostały dodane elementy
 
 ### Lista (ang. list)
-* definiujemy w `[ ]`
+* definiujemy w `[ ]` lub `list( )`
 * jest mutowalna, czyli możemy dodawać do niej elementy po utworzeniu, albo zmieniać istniejące elementy listy
 podobnie jak tupla lista jest uporządkowana
 * Do czego używamy list? Używamy do trzymania danych homogenicznych.
 
 ### Zbiór (ang. set)
+* definiujemy w `{ }` lub `set( )`
 
 ### Słownik (ang. dictionary)
-* definiujemy w `{ klucz: wartość }`
+* definiujemy w `{ klucz: wartość }` lub `dict()`
 * jest mutowalny, nieuporządkowany
 * restrykcje na klucz:
     * prawie wszystkie typy danych z pythona mogą być kluczem
