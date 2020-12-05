@@ -333,4 +333,35 @@ print(xxx2)
 for x in xxx2:
     print(x)
 
+xxx3 = tuple( x**3 for x in range( 1, 8 ) )
+print(xxx3)
 
+print('-' * 30)
+
+xxx4 = [ x%5 for x in range(100) ]
+print(xxx4)
+
+##############################################
+
+lista = [ "Ala", "Ola", "Ala", "Ula", "Ala", "Ala" ]
+
+# zmieniam na zbiór: --> pozbywam się powtórzeń
+print( set(lista) )
+
+# zmieniam z powrotem na listę --> pozbywam się powtórzeń
+print( list(set(lista)) )
+
+# wycinam fragment
+print( list(set(lista))[1:] )
+
+# odwracam kolejność
+print( list(set(lista))[1:][::-1] )
+
+# wyciągam początkowy element
+print( list(set(lista))[1:][::-1][0] )
+
+# wyciągam z niego ostatnią literę
+print( list(set(lista))[1:][::-1][0][-1] )
+
+# zamieniam ją na wielką literę
+print( list(set(lista))[1:][::-1][0][-1].upper() )
