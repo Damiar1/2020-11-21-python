@@ -392,3 +392,6 @@ print(f"róż. sym A i B={rs_AB}  (elementy będące w dokładnie jednym ze zbio
 print( 10 in A )
 print( 5 in B )
 
+potegi_2 = { 2**n for n in range(20) }
+print(potegi_2)
+
