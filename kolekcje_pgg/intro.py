@@ -301,4 +301,36 @@ print(slownik.items())
 for klucz, wartosc in slownik.items():
     print(f'{klucz} => {wartosc}')
 
-    
+print('-' * 30)
+
+# taka lista od razu zajmuje ponad 1MB pamięci!!!
+duuuuza_lista = [ 303 ] * 1000000
+
+# takie coś wylicza kolejne liczby na żądanie
+duzy_zakres = range(1,1000000 )
+
+# takie coś od razu wylicza 999 liczb
+duza_lista = [ 10 * x for x in range(1,1000) ]
+
+# takie coś wylicza te liczby dopiero na żądanie
+duza_lista2 = ( 10 * x for x in range(1,1000) )
+for n in duza_lista2:
+    print(n)
+    break
+
+print('-' * 30)
+
+xxx = [ 10000000+x for x in range(1,10000) if x % 379 == 0 ]
+# w ten sposób od razu wyliczam całą listę wartości
+# (a więc zajmuje ona pamięć!!!)
+print(xxx)
+
+xxx2 = ( 10000000+x for x in range(1,10000) if x % 379 == 0 )
+# powstaje generator, który przechodzi po przekazanej "liście"
+# i wylicza wartości dopiero, gdy są one potrzebne
+# (a więc oszczędza pamięć)
+print(xxx2)
+for x in xxx2:
+    print(x)
+
+
