@@ -11,6 +11,7 @@ powitanie()
 
 print("--" * 20)
 
+# Funkcja z jednym parametrem
 def powitanie2(imie):
     x = 7
     print(f"Witaj, {imie}")
@@ -20,4 +21,14 @@ def powitanie2(imie):
 
 pora_dnia = "noc"
 powitanie2("Mateusz")
+
+
+print("--" * 20)
+# Funkcja z jednym parametrem
+def powitanie3(imie="nieznajomy"):
+    print(f"Witaj, {imie}")
+
+pora_dnia = "noc"
+powitanie3("Mateusz")
+powitanie3()
 
