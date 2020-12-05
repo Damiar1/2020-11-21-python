@@ -18,9 +18,6 @@ b = []
 
 for x in a:
     if x % 2 == 0:
-        if x > 10:
-            b.append( 10 * "x" )
-        else:
-            b.append( x * "x" )
+        b.append(min(x, 10) * "x")
 
 print(b)
