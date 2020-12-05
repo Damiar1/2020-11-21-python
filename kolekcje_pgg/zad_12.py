@@ -11,8 +11,9 @@ while True:
     if x.lower() == 'koniec':
         break
     xx = int(x)
-    if 0 <= xx <= 100 and xx % 2 == 0:
-        liczby.add(xx)
+    liczby.add(xx)
+
+liczby = liczby & set(range(0,101,2))
 
 print(f"Zbiór: {liczby}")
 print(f"Liczba elementów: {len(liczby)}")
