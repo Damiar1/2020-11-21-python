@@ -392,6 +392,15 @@ print(f"róż. sym A i B={rs_AB}  (elementy będące w dokładnie jednym ze zbio
 print( 10 in A )
 print( 5 in B )
 
+# wyrażenie "listowe" dla zbioru
 potegi_2 = { 2**n for n in range(20) }
 print(potegi_2)
 
+# wyrażenie "listowe" dla słownika
+imiona = ["Mateusz", "Maciej", "Joanna", "Tomasz" ]
+imiona2 = {imie : imie[0] + "x" * (len(imie)-1) for imie in imiona}
+print(imiona2)
+
+# albo krócej:
+imiona3 = {imie : imie[0] + "x" * (len(imie)-1) for imie in "Mateusz Joanna Maciej Tomasz".split()}
+print(imiona3)
