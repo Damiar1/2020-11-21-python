@@ -402,5 +402,8 @@ imiona2 = {imie : imie[0] + "x" * (len(imie)-1) for imie in imiona}
 print(imiona2)
 
 # albo krócej:
-imiona3 = {imie : imie[0] + "x" * (len(imie)-1) for imie in "Mateusz Joanna Maciej Tomasz".split()}
+imiona3 = {
+    imie : imie[0] + "x" * (len(imie)-1)
+    for imie in "Mateusz Joanna Maciej Tomasz".split()
+}
 print(imiona3)
