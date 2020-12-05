@@ -12,3 +12,15 @@ ma dać w rezultacie:
                          4      14 -> 10      8           2     100 -> 10     80 -> 10
 listę b o zawartości: [ "xxxx", "xxxxxxxxxx", "xxxxxxxx", "xx", "xxxxxxxxxx", "xxxxxxxxxx" ]
 """
+
+a = [ 87, 93, 4, 13, 14, 8, 7, 3, 2, 100, 80, 81 ]
+b = []
+
+for x in a:
+    if x % 2 == 0:
+        if x > 10:
+            b.append( 10 * "x" )
+        else:
+            b.append( x * "x" )
+
+print(b)
