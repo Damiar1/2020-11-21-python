@@ -385,5 +385,10 @@ iloczyn_AB = A & B
 print(f"iloczyn A i B={iloczyn_AB}  (część wspólna)")
 
 rs_AB = A ^ B
-print(f"róż. sym A i B={rs_AB} (elementy będące w dokładnie jednym ze zbiorów)")
+print(f"róż. sym A i B={rs_AB}  (elementy będące w dokładnie jednym ze zbiorów)")
+
+# czy dana wartość jest w zbiorze czy nie?
+
+print( 10 in A )
+print( 5 in B )
 
