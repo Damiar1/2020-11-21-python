@@ -365,3 +365,25 @@ print( list(set(lista))[1:][::-1][0][-1] )
 
 # zamieniam ją na wielką literę
 print( list(set(lista))[1:][::-1][0][-1].upper() )
+
+##########################################33
+print("-----------------------------")
+
+A = { 1, 2, 3, 4, 5, 6 }
+B = { 4, 5, 6, 7, 8, 9 }
+
+print(f"A={A}")
+print(f"B={B}")
+
+suma_AB = A | B
+print(f"suma A i B={suma_AB}")
+
+roznica_AB = A - B
+print(f"różnica A i B={roznica_AB}")
+
+iloczyn_AB = A & B
+print(f"iloczyn A i B={iloczyn_AB}  (część wspólna)")
+
+rs_AB = A ^ B
+print(f"róż. sym A i B={rs_AB} (elementy będące w dokładnie jednym ze zbiorów)")
+
