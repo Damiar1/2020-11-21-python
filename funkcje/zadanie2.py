@@ -31,8 +31,7 @@ def podsumowanie(uczen):
 def czy_czerwony_pasek(uczen):
   if srednia_ucznia(uczen) >= 4.75:
     return True
-  else:
-    return False
+  return False
 
 for u in uczniowie:
     imie_n, sr = podsumowanie(u)
