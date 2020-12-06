@@ -43,3 +43,11 @@ temperaturyF = [ -10, 0, 10, 32, 60, 212 ]
 
 for temperatura in temperaturyF:
     print(f"{temperatura:10.2f}F = {przelicz_F_na_C(temperatura):10.2f}C")
+
+
+# TODO
+# napisać funkcję przelicz_temp( wartosc, z, na )
+# np.
+# przelicz_temp( 100, "C", "F" )    <-- zwraca 212
+# przelicz_temp( 32, "F", "C" )     <-- zwraca 0
+# przelicz_temp( 200, "C", "K" )    <-- zwraca 473.15
