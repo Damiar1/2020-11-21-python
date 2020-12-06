@@ -28,9 +28,11 @@ def imie_i_nazwisko_ucznia(uczen):
 def podsumowanie(uczen):
   return imie_i_nazwisko_ucznia(uczen), srednia_ucznia(uczen)
 
-#TODO: napisac funkcję czy_czerwony_pasek(uczen)
-# ktora zwraca True albo False
-# w zależności, czy uczeń zasługuje na czerwony pasek (śred >= 4.75)
+def czy_czerwony_pasek(uczen):
+  if srednia_ucznia(uczen) >= 4.75:
+    return True
+  if srednia_ucznia(uczen) < 4.75:
+    return False
 
 for u in uczniowie:
     imie_n, sr = podsumowanie(u)
