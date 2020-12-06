@@ -16,12 +16,21 @@ uczniowie = [
   { "imie" : "Marta", "nazwisko" : "O.", "oceny" : "3 4 3 4 4 4 4 4 3 3 3" }
 ]
 
-def srednia_ucznia(uczen):
-  oceny = [int(o) for o in uczen['oceny'].split()]
+def srednia_ocen(oceny):
   return sum(oceny) / len(oceny)
 
+def srednia_ucznia(uczen):
+  return srednia_ocen([int(o) for o in uczen['oceny'].split()])
+
+def imie_i_nazwisko_ucznia(uczen):
+  return f"{uczen['imie']} {uczen['nazwisko']}"
+
+def podsumowanie(uczen):
+  return imie_i_nazwisko_ucznia(uczen), srednia_ucznia(uczen)
+
 for u in uczniowie:
-    print(f"{u['imie']:15}  {srednia_ucznia(u)}")
+    imie_n, sr = podsumowanie(u)
+    print(f"{imie_n:15}  {sr}")
 
 najwyzsza_srednia = max( srednia_ucznia(u) for u in uczniowie )
 print(najwyzsza_srednia)
