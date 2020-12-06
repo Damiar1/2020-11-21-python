@@ -51,3 +51,36 @@ for temperatura in temperaturyF:
 # przelicz_temp( 100, "C", "F" )    <-- zwraca 212
 # przelicz_temp( 32, "F", "C" )     <-- zwraca 0
 # przelicz_temp( 200, "C", "K" )    <-- zwraca 473.15
+
+def przelicz_temp( wartosc, z, na ):
+    if z == na:
+        return wartosc
+
+    if z == "C":
+        tC = wartosc
+    elif z == "K":
+        tC = przelicz_K_na_C(wartosc)
+    elif z == "F":
+        tC = przelicz_F_na_C(wartosc)
+    # tutaj już mamy w Celsjuszach
+
+    if na == "C":
+        wynik = tC
+    elif na == "K":
+        wynik = przelicz_C_na_K(tC)
+    elif na == "F":
+        wynik = przelicz_C_na_F(tC)
+    return wynik
+
+do_przeliczenia = [
+    ( 100, "C", "F" ),
+    ( 32, "F", "C" ),
+    ( 200, "C", "K" ),
+    ( 36.6, "C", "C"),
+    ( 2, "K", "K")
+]
+
+for x in do_przeliczenia:
+    t, z, na = x
+    w = przelicz_temp(t, z, na)
+    print(f"{t:.1f}{z} = {w:.1f}{na}")
