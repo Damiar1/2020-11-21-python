@@ -59,16 +59,16 @@ def przelicz_temp( wartosc, z, na ):
 
     f_na_C = {
         "C" : funkcja_liniowa(1, 0),
-        "K" : przelicz_K_na_C,
-        "F" : przelicz_F_na_C
+        "K" : funkcja_liniowa(1, -273.15),
+        "F" : funkcja_liniowa(5/9, -5/9*32)
     }
     f = f_na_C[z]
     tC = f(wartosc)
     # tutaj już mamy w Celsjuszach
     f_z_C = {
         "C" : funkcja_liniowa(1, 0),
-        "K" : przelicz_C_na_K,
-        "F" : przelicz_C_na_F
+        "K" : funkcja_liniowa(1, 273.15),
+        "F" : funkcja_liniowa(1.8, 32)
     }
     f = f_z_C[na]
     wynik = f(tC)
