@@ -23,5 +23,5 @@ def srednia_ucznia(uczen):
 for u in uczniowie:
     print(f"{u['imie']:15}  {srednia_ucznia(u)}")
 
-# TODO2:
-# obliczyć najwyższą średnią
+najwyzsza_srednia = max( srednia_ucznia(u) for u in uczniowie )
+print(najwyzsza_srednia)
