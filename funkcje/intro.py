@@ -32,3 +32,27 @@ pora_dnia = "noc"
 powitanie3("Mateusz")
 powitanie3()
 
+print("--" * 20)
+# Funkcja zwracająca dwukrotność podanej liczby:
+
+def dwukrotnosc_liczby(x):
+    assert type(x) == int, f"Nieprawidłowy typ parametru w funkcji dwukrotnosc(): {type(x)}, oczekiwano: int"
+#    print(f"Obliczam dwukrotność {x}")
+#    print(2*x)
+    return 2*x
+
+def dwukrotnosc(x):
+    return 2*x
+
+
+# spodziewam sie wyniku 22
+a = dwukrotnosc_liczby(7) + 8
+print(a)
+
+imiona = ["ala", "ola", "ela"]
+b = dwukrotnosc(imiona)
+print(b)
+
+miesiace = "styczen luty marzec "
+c = dwukrotnosc(miesiace)
+print(c)
