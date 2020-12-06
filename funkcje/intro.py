@@ -78,3 +78,5 @@ liczby = [1,3,5,0,-4,4,-99]
 
 for n in liczby:
     print(f"{n} => {znak_liczby(n)}")
+
+

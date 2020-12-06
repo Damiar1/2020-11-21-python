@@ -26,7 +26,6 @@ c2 = {
     "min_grupa": 12,
     "cena_sali": 1600,
     "min_sala": 150
-
 }
 
 for g in grupy_testowe:
