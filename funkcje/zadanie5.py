@@ -58,20 +58,21 @@ def przelicz_temp( wartosc, z, na ):
         return wartosc
 
     f_na_C = {
-        "C" : funkcja_liniowa(1, 0),
-        "K" : funkcja_liniowa(1, -273.15),
-        "F" : funkcja_liniowa(5/9, -5/9*32)
+        "C" : (1, 0),
+        "K" : (1, -273.15),
+        "F" : (5/9, -5/9*32)
     }
-    f = f_na_C[z]
-    tC = f(wartosc)
+    a, b = f_na_C[z]
+    tC = funkcja_liniowa(a, b)(wartosc)
+
     # tutaj już mamy w Celsjuszach
     f_z_C = {
-        "C" : funkcja_liniowa(1, 0),
-        "K" : funkcja_liniowa(1, 273.15),
-        "F" : funkcja_liniowa(1.8, 32)
+        "C" : (1, 0),
+        "K" : (1, 273.15),
+        "F" : (1.8, 32)
     }
-    f = f_z_C[na]
-    wynik = f(tC)
+    a, b = f_z_C[na]
+    wynik = funkcja_liniowa(a, b)(tC)
 
     return wynik
 
