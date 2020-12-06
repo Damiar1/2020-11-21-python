@@ -8,9 +8,10 @@ przy zakupie co najmniej 10 biletów bilet kosztuje 13
 
 def koszt_biletow_grupy(liczba_osob):
     if liczba_osob >= 10:
-        return liczba_osob * 13
+        cena_biletu = 13
     else:
-        return liczba_osob * 20
+        cena_biletu = 20
+    return liczba_osob * cena_biletu
 
 grupy_testowe = [ 1, 2, 5, 7, 9, 13, 20, 50 ]
 
