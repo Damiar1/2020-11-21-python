@@ -24,5 +24,5 @@ def pokaz_ucznia( uczen ):
 
 # wywołanie funkcji:
 pokaz_ucznia(uczen1)
-#pokaz_ucznia(uczen2)
+pokaz_ucznia(uczen2)
 
