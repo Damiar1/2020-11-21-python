@@ -2,14 +2,13 @@
 Napisać funkcję obliczającą całkowity wstępu grupy osób  do kina, wg zasady:
 jeden bilet kosztuje 20
 przy zakupie co najmniej 10 biletów bilet kosztuje 13
+Przy co najmniej 150 osobach koszt jest stały i wynosi 1600.00 za całość.
 """
-
-# TODO: zaimplementować funkcję koszt_biletow_grupy(liczba_osob)
 
 def koszt_biletow_grupy(liczba_osob, cennik):
     return liczba_osob * ( cennik["cena_grupowa"] if liczba_osob >= cennik["min_grupa"] else cennik["cena_zwykla"] )
 
-grupy_testowe = [ 1, 2, 5, 7, 9, 13, 20, 50 ]
+grupy_testowe = [ 1, 2, 5, 7, 9, 13, 20, 50, 140, 160 ]
 
 c1 = {
     "cena_zwykla" : 20,
