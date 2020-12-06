@@ -16,7 +16,12 @@ uczniowie = [
   { "imie" : "Marta", "nazwisko" : "O.", "oceny" : "3 4 3 4 4 4 4 4 3 3 3" }
 ]
 
-# TODO: zaimplementowac funkcje srednia_ucznia
+def srednia_ucznia(uczen):
+  oceny = [int(o) for o in uczen['oceny'].split()]
+  return sum(oceny) / len(oceny)
 
 for u in uczniowie:
     print(f"{u['imie']:15}  {srednia_ucznia(u)}")
+
+# TODO2:
+# obliczyć najwyższą średnią
