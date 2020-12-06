@@ -26,7 +26,7 @@ def przelicz_C_na_F(t):
     return funkcja_liniowa(1.8, 32)(t)
 
 def przelicz_F_na_C(t):
-    return funkcja_liniowa(5/9,-17.78)(t)
+    return funkcja_liniowa(5/9, -5/9*32)(t)
 
 def przelicz_K_na_F(t):
     return przelicz_C_na_F(przelicz_K_na_C(t))
