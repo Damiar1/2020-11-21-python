@@ -31,12 +31,13 @@ def podsumowanie(uczen):
 def czy_czerwony_pasek(uczen):
   if srednia_ucznia(uczen) >= 4.75:
     return True
-  if srednia_ucznia(uczen) < 4.75:
+  else:
     return False
 
 for u in uczniowie:
     imie_n, sr = podsumowanie(u)
     print(f"{imie_n:15}  {sr}")
+    print(czy_czerwony_pasek(u))
 
 najwyzsza_srednia = max( srednia_ucznia(u) for u in uczniowie )
 print(najwyzsza_srednia)
