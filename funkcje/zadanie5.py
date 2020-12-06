@@ -69,12 +69,10 @@ def przelicz_temp( wartosc, z, na ):
     f_z_C = {
         "C" : (1, 0),
         "K" : (1, 273.15),
-        "F" : (1.8, 32)
+        "F" : (9/5, 32)
     }
     a, b = f_z_C[na]
-    wynik = funkcja_liniowa(a, b)(tC)
-
-    return wynik
+    return funkcja_liniowa(a, b)(tC)
 
 do_przeliczenia = [
     ( 100, "C", "F" ),
