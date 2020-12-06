@@ -10,7 +10,7 @@ def koszt_biletow_grupy(liczba_osob):
     cena_zwykla = 20
     cena_grupowa = 13
     min_grupa = 10
-    return liczba_osob * cena_grupowa if liczba_osob >= min_grupa else cena_zwykla
+    return liczba_osob * ( cena_grupowa if liczba_osob >= min_grupa else cena_zwykla )
 
 grupy_testowe = [ 1, 2, 5, 7, 9, 13, 20, 50 ]
 
