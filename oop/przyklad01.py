@@ -41,7 +41,7 @@ o2 = Osoba("Monika", "Xyz", 50, 1.63)
 o3 = Osoba("Basia", "Abc", 123, 1.57)
 o4 = Osoba("Wojciech", "Lalala", 78, 1.77)
 o5 = Osoba("Grzegorz", "Fff", 73, 1.77)
-osoby = [o1, o2, o3, o4, o5]
+osoby = [o1, o2, o3, o4, o5, Osoba("Aleksandra", "Ccc", 51, 1.63)]
 
 for o in osoby:
     o.przedstaw_sie()
