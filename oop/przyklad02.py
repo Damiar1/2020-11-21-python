@@ -44,9 +44,6 @@ class Osoba:
             random.gauss(1.75, 0.2)
         )
 
-
-# TODO: napisać funkcję generującą losowe osoby
-# (niekoniecznie o nazwie xxx...)
 osoby = [Osoba.losowa() for i in range(10)]
 
 for o in osoby:
