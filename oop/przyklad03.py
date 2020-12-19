@@ -7,12 +7,9 @@ class Osoba:
         self._waga = waga
         self._wzrost = wzrost
     def __str__(self):
-        # dopisać wagę, wzrost, bmi oraz ładne formatowanie
-        return f"Osoba: [{self.imie_i_nazwisko}]"
+        return f"{self.imie_i_nazwisko:20s} ({self._waga:5.1f}kg, {self._wzrost:4.2f}m, BMI {self.bmi:4.1f})"
     def witaj(self, a):
         print(f"Witam {a}! {self}")
-    def przedstaw_sie(self):
-        print(f"Nazywam się {self._imie} {self._nazwisko} ({self._waga:.1f}kg, {self._wzrost:.2f}m)")
     def pokaz_bmi(self):
         print(f"Moje BMI: {self.bmi:.1f}")
     @property
