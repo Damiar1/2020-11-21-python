@@ -14,6 +14,10 @@ class Osoba:
         print(f"Moje BMI: {self.bmi():.1f}")
     def bmi(self):
         return self.waga/self.wzrost**2
+    def ustaw_imie(self, imie):
+        self.imie = imie
+    def ustaw_nazwisko(self, nazwisko):
+        self.nazwisko = nazwisko
 
 print(Osoba)
 o1 = Osoba()
@@ -28,7 +32,6 @@ o4 = Osoba()
 print(o4.witaj)
 o4.witaj(600)
 
-# TODO: Zaimplementować metody:
 o4.ustaw_imie("Mateusz")
 o4.ustaw_nazwisko("AAAA")
 
