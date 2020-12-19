@@ -1,3 +1,5 @@
+import functools
+
 osoba1 = {"imie":"Xawery", "wzrost":1.81, "waga":72 }
 osoba2 = {"imie":"Zdzisław", "wzrost":1.61, "waga":92 }
 osoba3 = {"imie":"Zygmunt", "wzrost":1.91, "waga":71 }
@@ -34,6 +36,13 @@ osoby_niedowaga = list(filter(lambda o:o['waga']/(o['wzrost']**2)<20, osoby))
 print(osoby_niedowaga)
 
 # za pomoca reduce() policzyć sumaryczną wagę wszystkich osób
+sumaryczna_waga = functools.reduce(lambda w, o: w + o['waga'], osoby, 0 )
 
+# alternatywne rozwiązanie, bez reduce() tylko z sum()
+sw2 = sum([ o['waga'] for o in osoby ])
+
+print(sumaryczna_waga)
+print(sw2)
 
 # za pomocą reduce() stworzyć łańcuch tekstowy zawierający pierwsze litery imion wszystkich osób np. "XZZA"
+
