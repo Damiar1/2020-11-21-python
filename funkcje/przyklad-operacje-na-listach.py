@@ -10,10 +10,11 @@ print(liczby3)
 print(liczby3bis)
 
 # tylko większe równe od 10
-def ge10(x):
-    return x >= 10
+#def ge10(x):
+#    return x >= 10
 
-liczby10 = list(filter(ge10,liczby))
+#liczby10 = list(filter(ge10,liczby))
+liczby10 = list(filter(lambda x:x>=10, liczby))
 liczby10bis = [ x for x in liczby if x>=10 ]
 print(liczby10)
 print(liczby10bis)
