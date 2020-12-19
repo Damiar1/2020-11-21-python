@@ -2,12 +2,18 @@ def siema(x):
     print("Siema!")
 
 class Osoba:
+    imie = "nienazwany"
+    nazwisko = "nieznane"
+    waga = 0
+    wzrost = 0
     def xxx(self):
         for i in range(3):
             print("x")
     def witaj(self, a):
         self.xxx()
         print(f"Witam {a}! {self}")
+    def przedstaw_sie(self):
+        print(f"Nazywam się {self.imie} {self.nazwisko}")
 
 print(Osoba)
 o1 = Osoba()
@@ -22,4 +28,7 @@ o4 = Osoba()
 print(o4.witaj)
 o4.witaj(600)
 
-#siema()
+o4.imie = "Mateusz"
+
+o4.przedstaw_sie()
+
