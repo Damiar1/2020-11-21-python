@@ -45,4 +45,9 @@ print(sumaryczna_waga)
 print(sw2)
 
 # za pomocą reduce() stworzyć łańcuch tekstowy zawierający pierwsze litery imion wszystkich osób np. "XZZA"
+inicjaly = functools.reduce(lambda a, b: a + b['imie'][0], osoby, "")
+print(inicjaly)
 
+# alternatywne rozwiązanie, bez reduce() tylko z .join()
+in2 = "".join([ o['imie'][0] for o in osoby ])
+print(in2)
