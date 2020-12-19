@@ -13,8 +13,11 @@ osoby.sort(key=lambda osoba:-osoba["wzrost"])
 osoby.sort(key=lambda osoba:osoba["wzrost"], reverse=True)
 
 # wypisz osoby posortowane wg BMI
-
 osoby.sort(key=lambda o:o['waga']/(o['wzrost']**2))
 
 for o in osoby:
     print(o)
+
+# przekształć listę osób na listę stringów w formacie:
+# imie (BMI)
+# np. [ "Maks (24.6)", ...itd]
