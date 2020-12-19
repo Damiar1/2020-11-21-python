@@ -8,6 +8,9 @@ class Osoba:
         self._wzrost = wzrost
     def __str__(self):
         return f"{self.imie_i_nazwisko:20s} ({self._waga:5.1f}kg, {self._wzrost:4.2f}m, BMI {self.bmi:4.1f})"
+    def __repr__(self):
+        # TODO: Zaimplementować __repr__ uwaga na wszystkie możliwe przypadki!!!
+        return f"Osoba(\"{self._imie}\",...)"
     def witaj(self, a):
         print(f"Witam {a}! {self}")
     def pokaz_bmi(self):
@@ -48,6 +51,6 @@ class Osoba:
 
 osoby = [Osoba.losowa() for i in range(10)]
 
-for o in osoby:
-    print(o)
-    #print(f"{o} : {o.bmi:5.1f}")
+o1 = osoby[3]
+print(repr(o1))
+print(osoby)
