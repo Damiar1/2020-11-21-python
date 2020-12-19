@@ -1,5 +1,9 @@
 import functools
 
+# aby móc wołać po prostu reduce() zamiast functools.reduce()
+# from functools import *
+# from functools import reduce
+
 liczby = [3, 5, 10, 11, 15, 1, 23, 2, 3, 10, 2, 4, 17, 7]
 
 #def trzykrotnosc(x):
