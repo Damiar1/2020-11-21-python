@@ -2,7 +2,11 @@ def siema(x):
     print("Siema!")
 
 class Osoba:
+    def xxx(self):
+        for i in range(3):
+            print("x")
     def witaj(self, a):
+        self.xxx()
         print(f"Witam {a}! {self}")
 
 print(Osoba)
