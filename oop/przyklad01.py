@@ -1,9 +1,22 @@
 def ocen_zdrowie( bmi ):
-    # TODO: zaimplementować zwracanie opisu stanu zdrowia
-    # w oparciu o tabelkę: https://pl.wikipedia.org/wiki/Wska%C5%BAnik_masy_cia%C5%82a#Zakresy_warto%C5%9Bci_BMI
+    # https://pl.wikipedia.org/wiki/Wska%C5%BAnik_masy_cia%C5%82a#Zakresy_warto%C5%9Bci_BMI
     if bmi < 16.0:
         return "wygłodzenie"
-    # ...
+    elif bmi < 17.0:
+        return "wychudzenie"
+    elif bmi < 18.5:
+        return "niedowaga"
+    elif bmi < 25.0:
+        return "ok"
+    elif bmi < 30.0:
+        return "nadwaga"
+    elif bmi < 35.0:
+        return "otyłość I"
+    elif bmi < 40.0:
+        return "otyłość II"
+    else:
+        return "otyłość III"
+
 
 
 class Osoba:
@@ -25,25 +38,15 @@ class Osoba:
     def ustaw_nazwisko(self, nazwisko):
         self._nazwisko = nazwisko
 
-print(Osoba)
 o1 = Osoba("Jan", "Kowalski", 82, 1.76)
-print(o1)
-
 o2 = Osoba("Monika", "Xyz", 50, 1.63)
-o3 = Osoba("Basia", "Abc", 53, 1.57)
-osoby = [o1, o2, o3]
-print(osoby)
-
+o3 = Osoba("Basia", "Abc", 123, 1.57)
 o4 = Osoba("Wojciech", "Lalala", 78, 1.77)
-print(o4.witaj)
-o4.witaj(600)
-o4.przedstaw_sie()
-
-o4.pokaz_bmi()
-
-if o4.bmi() < 20:
-    print("Uuuuuu, niedożywiony.")
-else:
-    print("Wszystko w porządku")
-
 o5 = Osoba("Grzegorz", "Fff", 73, 1.77)
+osoby = [o1, o2, o3, o4, o5]
+
+for o in osoby:
+    o.przedstaw_sie()
+    ocena = ocen_zdrowie(o.bmi())
+    print(f"ocena zdrowia: {ocena}")
+
