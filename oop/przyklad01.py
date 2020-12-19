@@ -40,3 +40,5 @@ if o4.bmi() < 20:
     print("Uuuuuu, niedożywiony.")
 else:
     print("Wszystko w porządku")
+
+o5 = Osoba("Grzegorz", "Fff", 73, 1.77)
