@@ -30,3 +30,4 @@ osoby_bmi = list(map(lambda o:f"{o['imie']} ({o['waga']/(o['wzrost']**2):.1f})",
 
 print(osoby_bmi)
 
+# za pomocą filter() stwórz listę osób z niedowagą (BMI<20)
