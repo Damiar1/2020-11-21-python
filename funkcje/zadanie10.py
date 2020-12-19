@@ -21,3 +21,12 @@ for o in osoby:
 # przekształć listę osób na listę stringów w formacie:
 # imie (BMI)
 # np. [ "Maks (24.6)", ...itd]
+
+#def formatuj_osobe(o):
+#    return f"{o['imie']} ({o['waga']/(o['wzrost']**2):.1f})"
+
+#osoby_bmi = list(map(formatuj_osobe,osoby))
+osoby_bmi = list(map(lambda o:f"{o['imie']} ({o['waga']/(o['wzrost']**2):.1f})",osoby))
+
+print(osoby_bmi)
+
