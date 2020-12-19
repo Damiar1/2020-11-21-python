@@ -7,6 +7,7 @@ class Osoba:
         self._waga = waga
         self._wzrost = wzrost
     def __str__(self):
+        # dopisać wagę, wzrost, bmi oraz ładne formatowanie
         return f"Osoba: [{self.imie_i_nazwisko}]"
     def witaj(self, a):
         print(f"Witam {a}! {self}")
@@ -51,4 +52,5 @@ class Osoba:
 osoby = [Osoba.losowa() for i in range(10)]
 
 for o in osoby:
-    print(f"{o} : {o.bmi:5.1f}")
+    print(o)
+    #print(f"{o} : {o.bmi:5.1f}")
