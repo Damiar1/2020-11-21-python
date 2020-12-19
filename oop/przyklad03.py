@@ -15,6 +15,9 @@ class Osoba:
     @property
     def bmi(self):
         return self._waga/self._wzrost**2
+    @property
+    def imie_i_nazwisko(self):
+        return f"{self._imie} {self._nazwisko}"
     def ustaw_imie(self, imie):
         self._imie = imie
     def ustaw_nazwisko(self, nazwisko):
@@ -48,4 +51,4 @@ osoby = [Osoba.losowa() for i in range(10)]
 # TODO: dopisać własność (metodę) imie_i_nazwisko do klasy Osoba
 
 for o in osoby:
-    print(f"{o.imie_i_nazwisko} {o.bmi} stan_zdrowia: {Osoba.ocen_zdrowie(o.bmi)}")
+    print(f"{o.imie_i_nazwisko:20} {o.bmi:5.1f}  {Osoba.ocen_zdrowie(o.bmi):10}")
