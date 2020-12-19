@@ -2,12 +2,11 @@ def siema(x):
     print("Siema!")
 
 class Osoba:
-    _imie = "nienazwany"
-    _nazwisko = "nieznane"
-    _waga = 0
-    _wzrost = 0
-    def __init__(self):
-        print("Hurra! Jestem nową osobą!!!!!!!!")
+    def __init__(self, imie, nazwisko, waga, wzrost):
+        self._imie = imie
+        self._nazwisko = nazwisko
+        self._waga = waga
+        self._wzrost = wzrost
     def witaj(self, a):
         print(f"Witam {a}! {self}")
     def przedstaw_sie(self):
@@ -22,26 +21,18 @@ class Osoba:
         self._nazwisko = nazwisko
 
 print(Osoba)
-#o1 = Osoba("Jan", "Kowalski", 82, 1.76)
-o1 = Osoba()
+o1 = Osoba("Jan", "Kowalski", 82, 1.76)
 print(o1)
 
-o2 = Osoba()
-o3 = Osoba()
+o2 = Osoba("Monika", "Xyz", 50, 1.63)
+o3 = Osoba("Basia", "Abc", 53, 1.57)
 osoby = [o1, o2, o3]
 print(osoby)
 
-o4 = Osoba()
+o4 = Osoba("Wojciech", "Lalala", 78, 1.77)
 print(o4.witaj)
 o4.witaj(600)
-
-o4.ustaw_imie("Mateusz")
-o4.ustaw_nazwisko("AAAA")
-
 o4.przedstaw_sie()
-
-o4._waga = 60
-o4._wzrost = 1.8
 
 o4.pokaz_bmi()
 
