@@ -7,7 +7,7 @@ class Osoba:
         self._waga = waga
         self._wzrost = wzrost
     def __str__(self):
-        return "[No jakaś osoba]"
+        return f"Osoba: [{self.imie_i_nazwisko}]"
     def witaj(self, a):
         print(f"Witam {a}! {self}")
     def przedstaw_sie(self):
@@ -50,6 +50,5 @@ class Osoba:
 
 osoby = [Osoba.losowa() for i in range(10)]
 
-
 for o in osoby:
-    print(o)
+    print(f"{o} : {o.bmi:5.1f}")
