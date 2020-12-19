@@ -1,5 +1,10 @@
-def siema(x):
-    print("Siema!")
+def ocen_zdrowie( bmi ):
+    # TODO: zaimplementować zwracanie opisu stanu zdrowia
+    # w oparciu o tabelkę: https://pl.wikipedia.org/wiki/Wska%C5%BAnik_masy_cia%C5%82a#Zakresy_warto%C5%9Bci_BMI
+    if bmi < 16.0:
+        return "wygłodzenie"
+    # ...
+
 
 class Osoba:
     def __init__(self, imie, nazwisko, waga, wzrost):
