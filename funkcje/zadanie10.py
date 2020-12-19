@@ -9,8 +9,10 @@ osoby = [ osoba1, osoba2, osoba3, osoba4 ]
 osoby.sort(key=lambda osoba:osoba["wzrost"])
 
 # wypisz osoby posortowane wg wzrostu (od najwyższego)
+osoby.sort(key=lambda osoba:-osoba["wzrost"])
+osoby.sort(key=lambda osoba:osoba["wzrost"], reverse=True)
 
-
+# wypisz osoby posortowane wg BMI
 
 for o in osoby:
     print(o)
