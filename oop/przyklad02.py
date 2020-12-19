@@ -35,9 +35,9 @@ class Osoba:
             return "nadwaga"
         else:
             return "otyłość"
-    @staticmethod
-    def losowa():
-        return Osoba(
+    @classmethod
+    def losowa(cls):
+        return cls(
             random.choice(["Jan","Maciej","Mateusz","Andrzej","Tomasz"]),
             random.choice(["A","Bbb","Ccc","Ddd","Eee","Fff","Ggg"]),
             random.gauss(70,20),
