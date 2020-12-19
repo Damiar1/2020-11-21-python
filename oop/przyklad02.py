@@ -1,4 +1,5 @@
 import random
+random.seed(123)
 # dokumentacja modułu random: https://docs.python.org/3/library/random.html
 
 class Osoba:
@@ -10,7 +11,7 @@ class Osoba:
     def witaj(self, a):
         print(f"Witam {a}! {self}")
     def przedstaw_sie(self):
-        print(f"Nazywam się {self._imie} {self._nazwisko}")
+        print(f"Nazywam się {self._imie} {self._nazwisko} ({self._waga:.1f}kg, {self._wzrost:.2f}m)")
     def pokaz_bmi(self):
         print(f"Moje BMI: {self.bmi():.1f}")
     def bmi(self):
@@ -34,10 +35,19 @@ class Osoba:
             return "nadwaga"
         else:
             return "otyłość"
+    @staticmethod
+    def losowa():
+        return Osoba(
+            random.choice(["Jan","Maciej","Mateusz","Andrzej","Tomasz"]),
+            random.choice(["A","Bbb","Ccc","Ddd","Eee","Fff","Ggg"]),
+            random.gauss(70,20),
+            random.gauss(1.75, 0.2)
+        )
+
 
 # TODO: napisać funkcję generującą losowe osoby
 # (niekoniecznie o nazwie xxx...)
-osoby = [xxx() for i in range(10)]
+osoby = [Osoba.losowa() for i in range(10)]
 
 for o in osoby:
     o.przedstaw_sie()
