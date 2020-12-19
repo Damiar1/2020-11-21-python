@@ -32,3 +32,10 @@ najwieksza = functools.reduce(lambda a, b: a if a > b else b, liczby)
 print(produkt)
 print(suma)
 print(najwieksza)
+
+imiona = [ "Ala", "Ola", "Ela"]
+
+il1 = functools.reduce( lambda a,b: a + " " + b, imiona, "Imiona:")
+il2 = functools.reduce( lambda a,b: a + " " + b, ["Imiona:"] + imiona )
+print(il1)
+print(il2)

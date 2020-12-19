@@ -32,3 +32,8 @@ print(osoby_bmi)
 # za pomocą filter() stwórz listę osób z niedowagą (BMI<20)
 osoby_niedowaga = list(filter(lambda o:o['waga']/(o['wzrost']**2)<20, osoby))
 print(osoby_niedowaga)
+
+# za pomoca reduce() policzyć sumaryczną wagę wszystkich osób
+
+
+# za pomocą reduce() stworzyć łańcuch tekstowy zawierający pierwsze litery imion wszystkich osób np. "XZZA"
