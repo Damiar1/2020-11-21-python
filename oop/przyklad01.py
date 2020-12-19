@@ -28,7 +28,9 @@ o4 = Osoba()
 print(o4.witaj)
 o4.witaj(600)
 
-o4.imie = "Mateusz"
+# TODO: Zaimplementować metody:
+o4.ustaw_imie("Mateusz")
+o4.ustaw_nazwisko("AAAA")
 
 o4.przedstaw_sie()
 
