@@ -1,4 +1,6 @@
-liczby = [3, 5, 10, 11, 15, 1, 23, 2, 3, 10, 0, 4, 17, 7]
+import functools
+
+liczby = [3, 5, 10, 11, 15, 1, 23, 2, 3, 10, 2, 4, 17, 7]
 
 #def trzykrotnosc(x):
 #    return 3*x
@@ -19,3 +21,10 @@ liczby10bis = [ x for x in liczby if x>=10 ]
 print(liczby10)
 print(liczby10bis)
 
+#def mnoz(a, b):
+#    return a*b
+
+#produkt = functools.reduce(mnoz,liczby)
+produkt = functools.reduce(lambda a, b: a*b,liczby)
+
+print(produkt)
