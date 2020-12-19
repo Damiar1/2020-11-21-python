@@ -11,7 +11,8 @@ class Osoba:
     def przedstaw_sie(self):
         print(f"Nazywam się {self._imie} {self._nazwisko} ({self._waga:.1f}kg, {self._wzrost:.2f}m)")
     def pokaz_bmi(self):
-        print(f"Moje BMI: {self.bmi():.1f}")
+        print(f"Moje BMI: {self.bmi:.1f}")
+    @property
     def bmi(self):
         return self._waga/self._wzrost**2
     def ustaw_imie(self, imie):
@@ -47,4 +48,4 @@ osoby = [Osoba.losowa() for i in range(10)]
 for o in osoby:
     o.przedstaw_sie()
     o.pokaz_bmi()
-    print(f"stan_zdrowia: {Osoba.ocen_zdrowie(o.bmi())}")
+    print(f"stan_zdrowia: {Osoba.ocen_zdrowie(o.bmi)}")
