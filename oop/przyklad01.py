@@ -6,6 +6,8 @@ class Osoba:
     _nazwisko = "nieznane"
     _waga = 0
     _wzrost = 0
+    def __init__(self):
+        print("Hurra! Jestem nową osobą!!!!!!!!")
     def witaj(self, a):
         print(f"Witam {a}! {self}")
     def przedstaw_sie(self):
@@ -20,6 +22,7 @@ class Osoba:
         self._nazwisko = nazwisko
 
 print(Osoba)
+#o1 = Osoba("Jan", "Kowalski", 82, 1.76)
 o1 = Osoba()
 print(o1)
 
