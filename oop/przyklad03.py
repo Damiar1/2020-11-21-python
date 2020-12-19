@@ -48,7 +48,6 @@ class Osoba:
 
 osoby = [Osoba.losowa() for i in range(10)]
 
-# TODO: dopisać własność (metodę) imie_i_nazwisko do klasy Osoba
 
 for o in osoby:
     print(f"{o.imie_i_nazwisko:20} {o.bmi:5.1f}  {Osoba.ocen_zdrowie(o.bmi):10}")
