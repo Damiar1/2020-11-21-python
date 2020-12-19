@@ -15,6 +15,7 @@ class Osoba:
     def przedstaw_sie(self):
         print(f"Nazywam się {self.imie} {self.nazwisko}")
     def pokaz_bmi(self):
+        # TODO: Użyć istniejącej metody zamiast liczenia ze wzoru
         print(f"Moje BMI: {self.waga/self.wzrost**2:.1f}")
     def bmi(self):
         return self.waga/self.wzrost**2
