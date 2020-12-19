@@ -32,3 +32,9 @@ o4.imie = "Mateusz"
 
 o4.przedstaw_sie()
 
+# TODO: Dopisać metodę pokaz_bmi()
+
+o4.waga = 70
+o4.wzrost = 1.8
+
+o4.pokaz_bmi()
