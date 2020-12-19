@@ -14,6 +14,8 @@ class Osoba:
         print(f"Witam {a}! {self}")
     def przedstaw_sie(self):
         print(f"Nazywam się {self.imie} {self.nazwisko}")
+    def pokaz_bmi(self):
+        print(f"Moje BMI: {self.waga/self.wzrost**2:.1f}")
 
 print(Osoba)
 o1 = Osoba()
