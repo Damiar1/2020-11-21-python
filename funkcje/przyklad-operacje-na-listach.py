@@ -25,6 +25,10 @@ print(liczby10bis)
 #    return a*b
 
 #produkt = functools.reduce(mnoz,liczby)
-produkt = functools.reduce(lambda a, b: a*b,liczby)
+produkt = functools.reduce(lambda a, b: a*b, liczby)
+suma = functools.reduce(lambda a, b: a+b, liczby)
+najwieksza = functools.reduce(lambda a, b: a if a > b else b, liczby)
 
 print(produkt)
+print(suma)
+print(najwieksza)
