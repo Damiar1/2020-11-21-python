@@ -48,5 +48,8 @@ osoby = [o1, o2, o3, o4, o5]
 for o in osoby:
     o.przedstaw_sie()
     ocena = ocen_zdrowie(o.bmi())
-    print(f"ocena zdrowia: {ocena}")
+    print(f"{o.bmi():.1f}: ocena zdrowia: {ocena}")
 
+rozne_bmi = [ 21.3, 19.8, 23.5, 25.7, 27.8, 17.9 ]
+for bmi in rozne_bmi:
+    print(f"{bmi:.1f}: ocena zdrowia: {ocen_zdrowie(bmi)}")
