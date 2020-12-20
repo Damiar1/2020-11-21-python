@@ -26,8 +26,11 @@ dlugosci = [
     Dlugosc(101, 'cm')
 ]
 
-# TODO: naprawić sortowanie :-)
+# TODO
+print(dlugosci)
+
 dlugosci.sort()
 
 for x in dlugosci:
-    print(x.wartosc_w_m)
+    # TODO: 101cm 1.01
+    print(f"{x} {x.wartosc_w_m}")
