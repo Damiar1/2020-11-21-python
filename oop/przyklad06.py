@@ -23,6 +23,16 @@ class Dlugosc:
             self._wartosc_liczbowa + other.wartosc_w_jednostce(self._jednostka),
             self._jednostka
         )
+    def __sub__(self, other):
+        return type(self)(
+            self._wartosc_liczbowa - other.wartosc_w_jednostce(self._jednostka),
+            self._jednostka
+        )
+    def __neg__(self):
+        return type(self)(
+            -self._wartosc_liczbowa,
+            self._jednostka
+        )
     @property
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
@@ -34,7 +44,10 @@ class Dlugosc:
 a = Dlugosc(2, 'km')
 b = Dlugosc(3, 'mi')
 c = b.przelicz_na('km')
+d = a - b
+e = -c
 
-dlugosci = [a,b,c,a+c]
+dlugosci = [a,b,c,a+c,d,e]
 
-print(dlugosci)
+for dlugosc in dlugosci:
+    print(dlugosc)
