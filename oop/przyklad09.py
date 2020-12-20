@@ -23,6 +23,7 @@ def zlacz3( *napisy ):
     return "".join( napisy )
 # zlacz3 jest funkcją, która przyjmuje dowolną liczbę parametrów
 print(zlacz3("Ala","Ma","Kota","A","Ula","Ma","Psa"))
+# argumenty są dostępne w funkcji jako krotka
 
 def zlacz4( lacznik, *napisy ):
     return lacznik.join( napisy )
@@ -30,6 +31,8 @@ def zlacz4( lacznik, *napisy ):
 print(zlacz4("---","Ala","Ma","Kota","A","Ula","Ma","Psa"))
 
 def superfunkcja( *args ):
+    print("Wywołano funkcję z parametrami:")
+    print(args)
     # tutaj możemy sprawdzać np. ile było argumentów
     if len(args) == 1:
         # zrób coś
@@ -43,3 +46,19 @@ def superfunkcja( *args ):
     else:
         # zrób co innego
         pass
+
+superfunkcja( "Józef", 56, 100, True )
+
+def superfunkcja2( **kwargs ):
+    print("Wywołano funkcję z parametrami:")
+    print(kwargs)
+    # w tym momencie można z tym słownikiem zrobić dowolną rzecz
+
+superfunkcja2( imie="Józef", wiek=56 )
+
+def superfunkcja3( *args, **kwargs ):
+    print("Wywołano funkcję z parametrami:")
+    print(args)
+    print(kwargs)
+
+superfunkcja3( 12345, imie="Józef", wiek=56 )

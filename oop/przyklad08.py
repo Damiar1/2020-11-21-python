@@ -49,7 +49,12 @@ print("----- Tworzenie pracowników")
 
 p1 = Pracownik("Jan", "Kowalski")
 p2 = Pracownik("Janusz", "Kowalczyk")
-m1 = Menedzer("Andrzej", "Z", pracownicy=[p1, p2] )
+
+p3dane = { "imie" : "Barbara", "nazwisko" : "Kowalska", "stanowisko" : "sekretarka" }
+p3 = Pracownik(**p3dane)
+
+m1 = Menedzer("Andrzej", "Z", pracownicy=[p1, p2, p3] )
+
 
 print("----- Zmuszanie ich do pracy")
 p1.ustaw_stawke(47.50)
