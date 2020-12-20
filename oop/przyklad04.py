@@ -10,6 +10,8 @@ class Osoba:
         return f"{self.imie_i_nazwisko:20s} ({self._waga:5.1f}kg, {self._wzrost:4.2f}m, BMI {self.bmi:4.1f})"
     def __repr__(self):
         return f"{type(self).__name__}{repr((self._imie, self._nazwisko, self._waga, self._wzrost))}"
+    def __gt__(self, other):
+        return self._waga > other._waga
     def witaj(self, a):
         print(f"Witam {a}! {self}")
     def pokaz_bmi(self):
@@ -53,8 +55,13 @@ class Osoba:
 
 osoby = [Osoba.losowa() for i in range(10)]
 
-osoby.sort(key=lambda o:(o._nazwisko, o.imie, o._wzrost))
+osoby.sort()
+
+model = Osoba("XXX", "YYY", 73, 1.91)
 
 for o in osoby:
+    if o > model:
+        print("OK")
     print(o)
+
 
