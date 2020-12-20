@@ -16,6 +16,8 @@ class Dlugosc:
         return self.wartosc_w_m > other.wartosc_w_m
     def __str__(self):
         return f"{self._wartosc_liczbowa}{self._jednostka}"
+    def __repr__(self):
+        return f"{type(self).__name__}{repr((self._wartosc_liczbowa, self._jednostka))}"
     @property
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
@@ -28,7 +30,6 @@ dlugosci = [
     Dlugosc(101, 'cm')
 ]
 
-# TODO
 print(dlugosci)
 
 dlugosci.sort()
