@@ -14,6 +14,8 @@ class Dlugosc:
         self._jednostka = jednostka
     def __gt__(self, other):
         return self.wartosc_w_m > other.wartosc_w_m
+    def __str__(self):
+        return f"{self._wartosc_liczbowa}{self._jednostka}"
     @property
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
@@ -32,5 +34,4 @@ print(dlugosci)
 dlugosci.sort()
 
 for x in dlugosci:
-    # TODO: 101cm 1.01
     print(f"{x} {x.wartosc_w_m}")
