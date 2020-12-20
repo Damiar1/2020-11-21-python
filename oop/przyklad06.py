@@ -14,6 +14,8 @@ class Dlugosc:
         self._jednostka = jednostka
     def __gt__(self, other):
         return self.wartosc_w_m > other.wartosc_w_m
+    def __eq__(self, other):
+        return self.wartosc_w_m == other.wartosc_w_m
     def __str__(self):
         return f"{self._wartosc_liczbowa:.1f}{self._jednostka}"
     def __repr__(self):
@@ -54,3 +56,8 @@ dlugosci = [a,b,c,a+c,d,e]
 
 for dlugosc in dlugosci:
     print(dlugosc)
+
+a = Dlugosc(2, 'km')
+b = Dlugosc(200000, 'cm')
+
+print(a == b)
