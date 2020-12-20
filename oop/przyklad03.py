@@ -9,8 +9,7 @@ class Osoba:
     def __str__(self):
         return f"{self.imie_i_nazwisko:20s} ({self._waga:5.1f}kg, {self._wzrost:4.2f}m, BMI {self.bmi:4.1f})"
     def __repr__(self):
-        # TODO: Zaimplementować __repr__ uwaga na wszystkie możliwe przypadki!!!
-        return f"Osoba(\"{self._imie}\",...)"
+        return f"{type(self).__name__}{repr((self._imie, self._nazwisko, self._waga, self._wzrost))}"
     def witaj(self, a):
         print(f"Witam {a}! {self}")
     def pokaz_bmi(self):
@@ -43,7 +42,7 @@ class Osoba:
     @classmethod
     def losowa(cls):
         return cls(
-            random.choice(["Jan","Maciej","Mateusz","Andrzej","Tomasz"]),
+            random.choice(["Jan","Maciej","Mateusz","Andrzej","Tomasz",'"Kkkkkk"']),
             random.choice(["A","Bbb","Ccc","Ddd","Eee","Fff","Ggg"]),
             random.gauss(70,20),
             random.gauss(1.75, 0.2)
