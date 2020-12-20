@@ -18,6 +18,11 @@ class Dlugosc:
         return f"{self._wartosc_liczbowa:.1f}{self._jednostka}"
     def __repr__(self):
         return f"{type(self).__name__}{repr((self._wartosc_liczbowa, self._jednostka))}"
+    def __add__(self, other):
+        return type(self)(
+            self._wartosc_liczbowa + other.wartosc_w_jednostce(self._jednostka),
+            self._jednostka
+        )
     @property
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
@@ -28,7 +33,8 @@ class Dlugosc:
 
 a = Dlugosc(2, 'km')
 b = Dlugosc(3, 'mi')
-# TODO:
 c = b.przelicz_na('km')
 
-print([a,b,c])
+dlugosci = [a,b,c,a+c]
+
+print(dlugosci)
