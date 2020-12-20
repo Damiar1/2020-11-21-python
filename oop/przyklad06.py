@@ -51,10 +51,14 @@ class Dlugosc:
     # def __rmul__(self, other):
     #    return self * other
     def __truediv__(self, other):
-        return type(self)(
-            self._wartosc_liczbowa / other,
-            self._jednostka
-        )
+        if type(other) == type(self):
+            # tutaj należy zwrócić liczbę oznaczającą stosunek dwóch długości
+            return self.wartosc_w_m / other.wartosc_w_m
+        else:
+            return type(self)(
+                self._wartosc_liczbowa / other,
+                self._jednostka
+            )
     @property
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
@@ -71,7 +75,8 @@ d = a - b   # zostanie wywołane a.__sub__(b)
 e = -c      # zostanie wywołane c.__neg__()
 f = a * 3   # zostanie wywołane a.__mul__(3)
 g = 4 * b   # zostanie wywołane b.__rmul__(4)
-h = b / 6
+h = b / 6   # zostanie wywołane b.__truediv__(6)
+            # dzielenie Dlugosci przez liczbe zwraca inną Długość
 
 dlugosci = [a,b,c,cc,d,e,f,g,h]
 
@@ -80,5 +85,11 @@ for dlugosc in dlugosci:
 
 a = Dlugosc(2, 'km')
 b = Dlugosc(200000, 'cm')
-
 print(a == b)
+
+a = Dlugosc(200, 'km')
+b = Dlugosc(126, 'mi')
+
+# to powinno zwrócić liczbę (float)
+n = a / b
+print(f"Stosunek odległości a do b: {n}")
