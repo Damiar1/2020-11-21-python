@@ -20,7 +20,7 @@ class Pracownik:
         print(f"{self._imie}: Pracuję {czas}h")
         self._zarobione += self._stawka * czas
     def raport(self):
-        print(f"{self._imie} {self._nazwisko} ({self._stanowisko}): stawka {self._stawka:.2f}  zarobione: {self._zarobione:.2f}")
+        print(f"{self._imie:10} {self._nazwisko:10} ({self._stanowisko}): {self._stawka:.2f}/h  {self._zarobione:.2f}")
     def __repr__(self):
         return f"{self.__class__.__name__}{repr((self._imie, self._nazwisko, self._stanowisko))}"
 
@@ -32,8 +32,8 @@ class Menedzer(Pracownik):
         for p in self._pracownicy:
             p.raport()
     def raport(self):
-        print(f"{self._imie} {self._nazwisko} ({self._stanowisko}): stawka {self._stawka:.2f}  zarobione: {self._zarobione:.2f}")
-        print(f"{self._imie} {self._nazwisko} ({self._stanowisko}): Liczba podwładnych: {len(self._pracownicy)}")
+        super().raport()
+        print(f"{self._imie:10} {self._nazwisko:10} ({self._stanowisko}): Liczba podwładnych: {len(self._pracownicy)}")
     def pracuj(self, czas):
         print(f"{self._imie}: Menedżeruję {czas}h")
         self._zarobione += self._stawka * czas
