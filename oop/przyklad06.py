@@ -78,6 +78,8 @@ g = 4 * b   # zostanie wywołane b.__rmul__(4)
 h = b / 6   # zostanie wywołane b.__truediv__(6)
             # dzielenie Dlugosci przez liczbe zwraca inną Długość
 
+
+
 dlugosci = [a,b,c,cc,d,e,f,g,h]
 
 for dlugosc in dlugosci:
