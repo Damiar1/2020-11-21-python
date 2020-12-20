@@ -39,8 +39,10 @@ class Dlugosc:
             self._jednostka
         )
     def __mul__(self, other):
-        # TODO
-        pass
+        return type(self)(
+            self._wartosc_liczbowa * other,
+            self._jednostka
+        )
     @property
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
@@ -56,7 +58,8 @@ d = a - b
 e = -c
 f = a * 3
 
-dlugosci = [a,b,c,a+c,d,e]
+
+dlugosci = [a,b,c,a+c,d,e, f]
 
 for dlugosc in dlugosci:
     print(dlugosc)
