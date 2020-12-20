@@ -50,6 +50,11 @@ class Dlugosc:
     # Dlugosc(3, "m") --> self
     # def __rmul__(self, other):
     #    return self * other
+    def __truediv__(self, other):
+        return type(self)(
+            self._wartosc_liczbowa / other,
+            self._jednostka
+        )
     @property
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
@@ -68,7 +73,7 @@ f = a * 3   # zostanie wywołane a.__mul__(3)
 g = 4 * b   # zostanie wywołane b.__rmul__(4)
 h = b / 6
 
-dlugosci = [a,b,c,cc,d,e,f,g]
+dlugosci = [a,b,c,cc,d,e,f,g,h]
 
 for dlugosc in dlugosci:
     print(dlugosc)
