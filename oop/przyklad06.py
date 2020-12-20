@@ -43,6 +43,9 @@ class Dlugosc:
             self._wartosc_liczbowa * other,
             self._jednostka
         )
+    __rmul__ = __mul__
+    # def __rmul__(self, other):
+    #    return self * other
     @property
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
@@ -57,9 +60,9 @@ c = b.przelicz_na('km')
 d = a - b
 e = -c
 f = a * 3
+g = 4 * b
 
-
-dlugosci = [a,b,c,a+c,d,e, f]
+dlugosci = [a,b,c,a+c,d,e,f,g]
 
 for dlugosc in dlugosci:
     print(dlugosc)
