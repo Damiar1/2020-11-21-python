@@ -66,6 +66,7 @@ d = a - b   # zostanie wywołane a.__sub__(b)
 e = -c      # zostanie wywołane c.__neg__()
 f = a * 3   # zostanie wywołane a.__mul__(3)
 g = 4 * b   # zostanie wywołane b.__rmul__(4)
+h = b / 6
 
 dlugosci = [a,b,c,cc,d,e,f,g]
 
