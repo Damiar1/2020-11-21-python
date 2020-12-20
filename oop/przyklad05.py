@@ -1,4 +1,14 @@
 class Dlugosc:
+    przeliczniki = {
+        'm': 1,
+        'mm': 0.001,
+        'cm': 0.01,
+        'dm': 0.1,
+        'km': 1000,
+        'in': 0.025_4,
+        'mi': 1_609.344,
+        'ft': 0.304_8
+    }
     def __init__(self, wartosc_liczbowa, jednostka):
         self._wartosc_liczbowa = wartosc_liczbowa
         self._jednostka = jednostka
@@ -6,23 +16,14 @@ class Dlugosc:
         return self.wartosc_w_m > other.wartosc_w_m
     @property
     def wartosc_w_m(self):
-        if self._jednostka == 'm':
-            return self._wartosc_liczbowa
-        if self._jednostka == 'cm':
-            return self._wartosc_liczbowa / 100
-        if self._jednostka == 'in':
-            return self._wartosc_liczbowa * 0.025_4
-        if self._jednostka == 'km':
-            return self._wartosc_liczbowa * 1000
-        if self._jednostka == 'mi':
-            return self._wartosc_liczbowa * 1_609.344
+        return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
 
 dlugosci = [
-    Dlugosc(3, 'm'),
-    Dlugosc(4, 'km'),
-    Dlugosc(1, 'mi'),
-    Dlugosc(3000, 'in'),
-    Dlugosc(9678, 'cm')
+    Dlugosc(1.5, 'm'),
+    Dlugosc(0.0012, 'km'),
+    Dlugosc(0.0067, 'mi'),
+    Dlugosc(39.37, 'in'),
+    Dlugosc(101, 'cm')
 ]
 
 # TODO: naprawić sortowanie :-)
