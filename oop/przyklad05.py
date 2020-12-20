@@ -2,6 +2,9 @@ class Dlugosc:
     def __init__(self, wartosc_liczbowa, jednostka):
         self._wartosc_liczbowa = wartosc_liczbowa
         self._jednostka = jednostka
+    def __gt__(self, other):
+        return self.wartosc_w_m > other.wartosc_w_m
+    @property
     def wartosc_w_m(self):
         if self._jednostka == 'm':
             return self._wartosc_liczbowa
@@ -26,4 +29,4 @@ dlugosci = [
 dlugosci.sort()
 
 for x in dlugosci:
-    print(x.wartosc_w_m())
+    print(x.wartosc_w_m)
