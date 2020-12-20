@@ -21,11 +21,12 @@ class Employee:
         self._stawka = stawka
         self._zarobione = 0
     def register_time(self, czas):
-        self._zarobione += self._stawka * czas if czas <= 8 else self._stawka * ( 8 + 2 * ( czas - 8 ) )
+        self._zarobione += self._stawka * ( czas if czas <= 8 else ( 8 + 2 * ( czas - 8 ) ) )
     def pay_salary(self):
-        print(self._zarobione)
+        x = self._zarobione
         self._zarobione = 0
+        return x
 
 e1 = Employee("Jan","Kowalski",100.0)
-e1.register_time(9)
-e1.pay_salary()
+e1.register_time(7)
+print( e1.pay_salary() )
