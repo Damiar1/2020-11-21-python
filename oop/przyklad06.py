@@ -22,17 +22,9 @@ class Dlugosc:
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
 
-dlugosci = [
-    Dlugosc(1.5, 'm'),
-    Dlugosc(0.0012, 'km'),
-    Dlugosc(0.0067, 'mi'),
-    Dlugosc(39.37, 'in'),
-    Dlugosc(101, 'cm')
-]
+a = Dlugosc(2, 'km')
+b = Dlugosc(3, 'mi')
+# TODO:
+c = b.przelicz_na('m')
 
-print(dlugosci)
-
-dlugosci.sort()
-
-for x in dlugosci:
-    print(f"{x} {x.wartosc_w_m}")
+print([a,b,c])
