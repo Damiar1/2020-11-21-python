@@ -24,7 +24,7 @@ class Employee:
         if czas <= 8:
             self._zarobione += self._stawka * czas
         else:
-            self._zarobione += self._stawka * 8 + 2 * self._stawka * ( czas - 8 )
+            self._zarobione += self._stawka * ( 8 + 2 * ( czas - 8 ) )
     def pay_salary(self):
         print(self._zarobione)
         self._zarobione = 0
