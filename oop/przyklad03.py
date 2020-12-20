@@ -18,6 +18,9 @@ class Osoba:
     def bmi(self):
         return self._waga/self._wzrost**2
     @property
+    def imie(self):
+        return self._imie
+    @property
     def imie_i_nazwisko(self):
         return f"{self._imie} {self._nazwisko}"
     def ustaw_imie(self, imie):
@@ -43,13 +46,15 @@ class Osoba:
     def losowa(cls):
         return cls(
             random.choice(["Jan","Maciej","Mateusz","Andrzej","Tomasz",'"Kkkkkk"']),
-            random.choice(["A","Bbb","Ccc","Ddd","Eee","Fff","Ggg"]),
+            random.choice(["A","Bbb","Ccc","Ddd"]),
             random.gauss(70,20),
             random.gauss(1.75, 0.2)
         )
 
 osoby = [Osoba.losowa() for i in range(10)]
 
-o1 = osoby[3]
-print(repr(o1))
-print(osoby)
+osoby.sort(key=lambda o:(o._nazwisko, o.imie, o._wzrost))
+
+for o in osoby:
+    print(o)
+
