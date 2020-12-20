@@ -15,6 +15,12 @@ def drukuj_swiadectwo(
 
 drukuj_swiadectwo(nazwisko="Kowalski", imie="Jan")
 
-sw1 = {"imie":"Janusz", "nazwisko":"Jjj", "klasa":7, "oceny" : {"matematyka":5,"polski":4}}
-
+# słownik zawierający nazwane argumenty (w dowolnej kolejności)
+sw1 = {"klasa":7, "imie":"Janusz", "oceny" : {"matematyka":5,"polski":4}, "nazwisko":"Jjj"}
+# użycie go w wywołaniu funkcji:
 drukuj_swiadectwo( **sw1 )
+
+# krotka zawierająca kolejne argumenty (w prawidłowej kolejności)
+sw2 = ( "Ola","Kowalska",8,{"Polski":6,"Matematyka":6})
+# uzycie jej w wywołaniu funkcji:
+drukuj_swiadectwo( *sw2 )
