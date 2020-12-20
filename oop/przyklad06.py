@@ -21,6 +21,10 @@ class Dlugosc:
     @property
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
+    def wartosc_w_jednostce(self, jednostka):
+        return self.wartosc_w_m / self.przeliczniki[jednostka]
+    def przelicz_na(self, jednostka):
+        return type(self)(self.wartosc_w_jednostce(jednostka), jednostka)
 
 a = Dlugosc(2, 'km')
 b = Dlugosc(3, 'mi')
