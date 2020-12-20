@@ -14,11 +14,16 @@ class Dlugosc:
         if self._jednostka == 'mi':
             return self._wartosc_liczbowa * 1_609.344
 
-x1 = Dlugosc(1.8, 'm')
-x2 = Dlugosc(175, 'cm')
-x3 = Dlugosc(40, 'in')
+dlugosci = [
+    Dlugosc(3, 'm'),
+    Dlugosc(4, 'km'),
+    Dlugosc(1, 'mi'),
+    Dlugosc(3000, 'in'),
+    Dlugosc(9678, 'cm')
+]
 
-dlugosci = [ x1, x2, x3 ]
+# TODO: naprawić sortowanie :-)
+dlugosci.sort()
 
 for x in dlugosci:
     print(x.wartosc_w_m())
