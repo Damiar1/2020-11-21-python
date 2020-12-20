@@ -31,12 +31,17 @@ class Menedzer(Pracownik):
     def raport_pracownikow(self):
         for p in self._pracownicy:
             p.raport()
+    def raport(self):
+        print(f"{self._imie} {self._nazwisko} ({self._stanowisko}): stawka {self._stawka:.2f}  zarobione: {self._zarobione:.2f}")
+        print(f"{self._imie} {self._nazwisko} ({self._stanowisko}): Liczba podwładnych: {len(self._pracownicy)}")
     def pracuj(self, czas):
         print(f"{self._imie}: Menedżeruję {czas}h")
         self._zarobione += self._stawka * czas
 
 class Prezes(Menedzer):
     pass
+
+print("----- Tworzenie pracowników")
 
 p1 = Pracownik("Jan", "Kowalski")
 p1.ustaw_stawke(47.50)
@@ -57,8 +62,16 @@ m1.raport()
 r1 = Robot("ZXX400","a789ss78a")
 zasoby = [p1,p2,r1,m1]
 
+print("----- Zmuszanie ich do pracy")
+
 for z in zasoby:
     z.pracuj(1)
+
+print("----- Wzywanie ich do raportu")
+
+pracownicy = [p1,p2,m1]
+for p in pracownicy:
+    p.raport()
 
 
 # m1.ustaw_stawke(300)
