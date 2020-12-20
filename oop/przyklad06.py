@@ -44,6 +44,10 @@ class Dlugosc:
             self._jednostka
         )
     __rmul__ = __mul__
+    # przykład:
+    # 7.2 * Dlugosc(3, "m")
+    # 7.2 --> other
+    # Dlugosc(3, "m") --> self
     # def __rmul__(self, other):
     #    return self * other
     @property
@@ -57,12 +61,13 @@ class Dlugosc:
 a = Dlugosc(2, 'km')
 b = Dlugosc(3, 'mi')
 c = b.przelicz_na('km')
-d = a - b
-e = -c
-f = a * 3
-g = 4 * b
+cc = a + c  # zostanie wywołane a.__add__(c)
+d = a - b   # zostanie wywołane a.__sub__(b)
+e = -c      # zostanie wywołane c.__neg__()
+f = a * 3   # zostanie wywołane a.__mul__(3)
+g = 4 * b   # zostanie wywołane b.__rmul__(4)
 
-dlugosci = [a,b,c,a+c,d,e,f,g]
+dlugosci = [a,b,c,cc,d,e,f,g]
 
 for dlugosc in dlugosci:
     print(dlugosc)
