@@ -24,6 +24,9 @@ class Dlugosc:
             self._jednostka
         )
     def __sub__(self, other):
+        # krótsze rozwiązanie:
+        # return self + -other
+        # tworzy tymczasowy obiekt -other i dodaje go do siebie (potencjalnie mniej wydajne)
         return type(self)(
             self._wartosc_liczbowa - other.wartosc_w_jednostce(self._jednostka),
             self._jednostka
