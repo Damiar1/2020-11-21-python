@@ -25,7 +25,11 @@ class Pracownik:
         return f"{self.__class__.__name__}{repr((self._imie, self._nazwisko, self._stanowisko))}"
 
 class Menedzer(Pracownik):
-    _pracownicy = []
+    def __init__(self, imie, nazwisko, stanowisko=None, pracownicy=[]):
+        # najpierw wołam konstruktor klasy nadrzędnej
+        super().__init__(imie, nazwisko, stanowisko)
+        # potem dokonuję inicjacji własnych atrybutów
+        self._pracownicy = pracownicy
     def dodaj_pracownika(self, pracownik):
         self._pracownicy.append(pracownik)
     def raport_pracownikow(self):
@@ -44,18 +48,18 @@ class Prezes(Menedzer):
 print("----- Tworzenie pracowników")
 
 p1 = Pracownik("Jan", "Kowalski")
+p2 = Pracownik("Janusz", "Kowalczyk")
+m1 = Menedzer("Andrzej", "Z", pracownicy=[p1, p2] )
+
+print("----- Zmuszanie ich do pracy")
 p1.ustaw_stawke(47.50)
 p1.pracuj(7.0)
-
-p2 = Pracownik("Janusz", "Kowalczyk")
 p2.ustaw_stawke(43.50)
 p2.pracuj(8.0)
-
-m1 = Menedzer("Andrzej", "Z")
 m1.ustaw_stawke(300)
 m1.pracuj(1.0)
-m1.dodaj_pracownika(p1)
-m1.dodaj_pracownika(p2)
+#m1.dodaj_pracownika(p1)
+#m1.dodaj_pracownika(p2)
 m1.raport_pracownikow()
 m1.raport()
 
