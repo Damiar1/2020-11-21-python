@@ -25,6 +25,6 @@ class Dlugosc:
 a = Dlugosc(2, 'km')
 b = Dlugosc(3, 'mi')
 # TODO:
-c = b.przelicz_na('m')
+c = b.przelicz_na('km')
 
 print([a,b,c])
