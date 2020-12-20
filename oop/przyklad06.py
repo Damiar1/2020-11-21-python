@@ -38,6 +38,9 @@ class Dlugosc:
             -self._wartosc_liczbowa,
             self._jednostka
         )
+    def __mul__(self, other):
+        # TODO
+        pass
     @property
     def wartosc_w_m(self):
         return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]
@@ -51,6 +54,7 @@ b = Dlugosc(3, 'mi')
 c = b.przelicz_na('km')
 d = a - b
 e = -c
+f = a * 3
 
 dlugosci = [a,b,c,a+c,d,e]
 
