@@ -1,6 +1,8 @@
 # najpierw nalezy w terminalu wykonać polecenie:
 # python -m pip install requests
 # (alternatywnie:) pip install requests
+# jeśli nie mamy wirtualnego środowiska:
+# py -m pip install requests
 
 # API NBP: http://api.nbp.pl/
 
