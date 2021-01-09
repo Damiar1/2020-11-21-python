@@ -8,3 +8,17 @@
 #   },
 # ...
 # ]
+
+import json
+
+def srednia(oceny):
+    return sum(oceny)/len(oceny)
+
+uczniowie = json.load(open("uczniowie.json", encoding="UTF-8"))
+
+uczniowie.sort(key=lambda u:srednia(u['oceny']))
+
+najlepsi = [ { "kto" : f"{u['imie']} {u['nazwisko']}", "srednia" : srednia(u['oceny']) } for u in uczniowie[-3:]]
+
+json.dump(najlepsi, open("najlepsi.json", "w", encoding="UTF8"), indent=2)
+
