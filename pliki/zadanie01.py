@@ -12,3 +12,12 @@ for linia in open("tankowania.txt"):
     print(f"Tankowanie {obj}L * {cena} PLN = {koszt:.2f} PLN")
 
 print(f"Razem: {kosztCalk:.2f} PLN")
+
+# Zakładając, że każde tankowanie było do pełna, policzyć spalanie na każdym odcinku.
+# Policzyć:
+# - koszt dzienny na każdym tankowaniu
+# - średni koszt dzienny w całym okresie
+# - średni koszt miesięczny na całym okresie
+# - średni przebieg dzienny
+# - średnie zużycie paliwa na 100km (na każdym tankowaniu osobno i sumarycznie)
+# - itd
