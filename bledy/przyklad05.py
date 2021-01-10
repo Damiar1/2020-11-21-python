@@ -4,15 +4,18 @@ import json
 class NiktTyleNieZyje(Exception):
     pass
 
-class PoborowyZaStary(Exception):
+class PoborowySieNieNadaje(Exception):
+    pass
+
+class PoborowyZaStary(PoborowySieNieNadaje):
     def __init__(self, wiek):
         self.wiek = wiek
 
-class PoborowyNiezdrowy(Exception):
+class PoborowyNiezdrowy(PoborowySieNieNadaje):
     def __init__(self, bmi):
         self.bmi = bmi
 
-class PoborowyZaNiski(Exception):
+class PoborowyZaNiski(PoborowySieNieNadaje):
     def __init__(self, wzrost):
         self.wzrost = wzrost
 
@@ -20,6 +23,10 @@ class Osoba:
     def __init__(self, imie, nazwisko, waga, wzrost, rok_urodzenia):
         self._imie = imie
         self._nazwisko = nazwisko
+        try:
+            assert type(nazwisko) == str
+        except:
+            raise TypeError
         self._waga = waga
         self._wzrost = wzrost
         self._rokur = rok_urodzenia
@@ -90,15 +97,18 @@ for o in osoby:
     print(f"* {osoba}")
     try:
         poborowy = Poborowy.rekrutuj(osoba)
-    except PoborowyZaStary as e:
-        print(f"Za stary (wiek: {e.wiek}): {osoba}")
+    except PoborowySieNieNadaje as e:
+        print("Nie nadaje się")
         continue
-    except PoborowyNiezdrowy as e:
-        print(f"Za stary (bmi: {e.bmi}): {osoba}")
-        continue
-    except PoborowyZaNiski as e:
-        print(f"Za niski: {osoba}")
-        continue
+    # except PoborowyZaStary as e:
+    #     print(f"Za stary (wiek: {e.wiek}): {osoba}")
+    #     continue
+    # except PoborowyNiezdrowy as e:
+    #     print(f"Za stary (bmi: {e.bmi}): {osoba}")
+    #     continue
+    # except PoborowyZaNiski as e:
+    #     print(f"Za niski: {osoba}")
+    #     continue
     poborowi.append(poborowy)
 
 print("--------------")

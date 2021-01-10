@@ -15,7 +15,7 @@
   },
   {
     "imie": "Barnaba",
-    "nazwisko": "A.",
+    "nazwisko": 123,
     "waga": 82.6,
     "wzrost": 1.75,
     "rok_urodzenia": 1981
