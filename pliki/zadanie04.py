@@ -14,23 +14,26 @@ def rysuj_wykres(dane, nazwapliku):
     ODSTEP = 10
     f = open(nazwapliku, "w")
     f.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>')
-    f.write(f'<svg width="{SZER}" height="{WYS}" xmlns="http://www.w3.org/2000/svg">')
-    maxwartosc = 0
-    for etykieta, wartosc in dane:
-        if wartosc > maxwartosc:
-            maxwartosc = wartosc
+    f.write(f'<svg width="{SZER}" height="{WYS}" xmlns="http://www.w3.org/2000/svg">\n')
+    maxwartosc = max([x[1] for x in dane])
+    minwartosc = min([x[1] for x in dane])*0.99
     x = MARGIN
     for etykieta, wartosc in dane:
-        wysokosc = wartosc/maxwartosc * (WYS-2*MARGIN)
+        wysokosc_wzg = (wartosc-minwartosc)/(maxwartosc-minwartosc)
+        wysokosc_max = WYS-2*MARGIN
+        wysokosc = wysokosc_wzg * wysokosc_max
         szer = (SZER-2*MARGIN-(len(dane)-1)*ODSTEP )/len(dane)
-        y = ODSTEP+(maxwartosc-wartosc)/maxwartosc*(WYS-2*MARGIN)
-        f.write(f'<rect x="{x}" y="{y}" width="{szer}" height="{wysokosc}" fill="#f00" stroke="#000" />')
+        y = ODSTEP + wysokosc_max - wysokosc
+        f.write(f'<rect x="{x:.1f}" y="{y:.1f}" width="{szer:.1f}" height="{wysokosc:.1f}" fill="#f00" stroke="#000" />\n')
+        f.write(f'<text x="{x:.1f}" y="{y:.1f}">{wartosc}</text>\n')
+        # FIXME poprawić obracanie
+        f.write(f'<text x="{x:.1f}" y="{ODSTEP+wysokosc_max:.1f}" transform="translate({x},{ODSTEP+wysokosc_max}) rotate(90)">{etykieta}</text>\n')
         x+=szer+ODSTEP
     f.write('</svg>')
 
 #waluta = input("Podaj kod waluty: ")
 waluta = "EUR"
-ile = 13
+ile = 30
 
 url = URL % ( waluta, ile )
 
