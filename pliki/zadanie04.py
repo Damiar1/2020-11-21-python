@@ -29,6 +29,7 @@ def rysuj_wykres(dane, nazwapliku):
         f.write(f'<text x="{x:.1f}" y="{ODSTEP+wysokosc_max:.1f}" transform="rotate(-90, {x},{ODSTEP+wysokosc_max})">{etykieta}</text>\n')
         x+=szer+ODSTEP
     f.write('</svg>')
+    f.close()
 
 #waluta = input("Podaj kod waluty: ")
 waluta = "EUR"
