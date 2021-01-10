@@ -1,92 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-<rect x="20.0" y="357.9" width="15.7" height="212.1" fill="#f00" stroke="#000" />
-<text x="20.0" y="357.9">4.471</text>
-<text x="20.0" y="570.0" transform="translate(20,570) rotate(90)">2020-11-25</text>
-<rect x="45.7" y="350.1" width="15.7" height="219.9" fill="#f00" stroke="#000" />
-<text x="45.7" y="350.1">4.4742</text>
-<text x="45.7" y="570.0" transform="translate(45.666666666666664,570) rotate(90)">2020-11-26</text>
-<rect x="71.3" y="325.7" width="15.7" height="244.3" fill="#f00" stroke="#000" />
-<text x="71.3" y="325.7">4.4843</text>
-<text x="71.3" y="570.0" transform="translate(71.33333333333333,570) rotate(90)">2020-11-27</text>
-<rect x="97.0" y="341.2" width="15.7" height="228.8" fill="#f00" stroke="#000" />
-<text x="97.0" y="341.2">4.4779</text>
-<text x="97.0" y="570.0" transform="translate(97.0,570) rotate(90)">2020-11-30</text>
-<rect x="122.7" y="343.6" width="15.7" height="226.4" fill="#f00" stroke="#000" />
-<text x="122.7" y="343.6">4.4769</text>
-<text x="122.7" y="570.0" transform="translate(122.66666666666666,570) rotate(90)">2020-12-01</text>
-<rect x="148.3" y="374.3" width="15.7" height="195.7" fill="#f00" stroke="#000" />
-<text x="148.3" y="374.3">4.4642</text>
-<text x="148.3" y="570.0" transform="translate(148.33333333333331,570) rotate(90)">2020-12-02</text>
-<rect x="174.0" y="338.8" width="15.7" height="231.2" fill="#f00" stroke="#000" />
-<text x="174.0" y="338.8">4.4789</text>
-<text x="174.0" y="570.0" transform="translate(173.99999999999997,570) rotate(90)">2020-12-03</text>
-<rect x="199.7" y="352.6" width="15.7" height="217.4" fill="#f00" stroke="#000" />
-<text x="199.7" y="352.6">4.4732</text>
-<text x="199.7" y="570.0" transform="translate(199.66666666666663,570) rotate(90)">2020-12-04</text>
-<rect x="225.3" y="349.4" width="15.7" height="220.6" fill="#f00" stroke="#000" />
-<text x="225.3" y="349.4">4.4745</text>
-<text x="225.3" y="570.0" transform="translate(225.3333333333333,570) rotate(90)">2020-12-07</text>
-<rect x="251.0" y="344.1" width="15.7" height="225.9" fill="#f00" stroke="#000" />
-<text x="251.0" y="344.1">4.4767</text>
-<text x="251.0" y="570.0" transform="translate(250.99999999999994,570) rotate(90)">2020-12-08</text>
-<rect x="276.7" y="421.0" width="15.7" height="149.0" fill="#f00" stroke="#000" />
-<text x="276.7" y="421.0">4.4449</text>
-<text x="276.7" y="570.0" transform="translate(276.66666666666663,570) rotate(90)">2020-12-09</text>
-<rect x="302.3" y="462.9" width="15.7" height="107.1" fill="#f00" stroke="#000" />
-<text x="302.3" y="462.9">4.4276</text>
-<text x="302.3" y="570.0" transform="translate(302.3333333333333,570) rotate(90)">2020-12-10</text>
-<rect x="328.0" y="436.5" width="15.7" height="133.5" fill="#f00" stroke="#000" />
-<text x="328.0" y="436.5">4.4385</text>
-<text x="328.0" y="570.0" transform="translate(328.0,570) rotate(90)">2020-12-11</text>
-<rect x="353.7" y="425.1" width="15.7" height="144.9" fill="#f00" stroke="#000" />
-<text x="353.7" y="425.1">4.4432</text>
-<text x="353.7" y="570.0" transform="translate(353.6666666666667,570) rotate(90)">2020-12-14</text>
-<rect x="379.3" y="423.0" width="15.7" height="147.0" fill="#f00" stroke="#000" />
-<text x="379.3" y="423.0">4.4441</text>
-<text x="379.3" y="570.0" transform="translate(379.33333333333337,570) rotate(90)">2020-12-15</text>
-<rect x="405.0" y="445.7" width="15.7" height="124.3" fill="#f00" stroke="#000" />
-<text x="405.0" y="445.7">4.4347</text>
-<text x="405.0" y="570.0" transform="translate(405.00000000000006,570) rotate(90)">2020-12-16</text>
-<rect x="430.7" y="445.5" width="15.7" height="124.5" fill="#f00" stroke="#000" />
-<text x="430.7" y="445.5">4.4348</text>
-<text x="430.7" y="570.0" transform="translate(430.66666666666674,570) rotate(90)">2020-12-17</text>
-<rect x="456.3" y="410.4" width="15.7" height="159.6" fill="#f00" stroke="#000" />
-<text x="456.3" y="410.4">4.4493</text>
-<text x="456.3" y="570.0" transform="translate(456.3333333333334,570) rotate(90)">2020-12-18</text>
-<rect x="482.0" y="251.7" width="15.7" height="318.3" fill="#f00" stroke="#000" />
-<text x="482.0" y="251.7">4.5149</text>
-<text x="482.0" y="570.0" transform="translate(482.0000000000001,570) rotate(90)">2020-12-21</text>
-<rect x="507.7" y="271.0" width="15.7" height="299.0" fill="#f00" stroke="#000" />
-<text x="507.7" y="271.0">4.5069</text>
-<text x="507.7" y="570.0" transform="translate(507.6666666666668,570) rotate(90)">2020-12-22</text>
-<rect x="533.3" y="283.1" width="15.7" height="286.9" fill="#f00" stroke="#000" />
-<text x="533.3" y="283.1">4.5019</text>
-<text x="533.3" y="570.0" transform="translate(533.3333333333335,570) rotate(90)">2020-12-23</text>
-<rect x="559.0" y="267.4" width="15.7" height="302.6" fill="#f00" stroke="#000" />
-<text x="559.0" y="267.4">4.5084</text>
-<text x="559.0" y="570.0" transform="translate(559.0000000000001,570) rotate(90)">2020-12-24</text>
-<rect x="584.7" y="317.0" width="15.7" height="253.0" fill="#f00" stroke="#000" />
-<text x="584.7" y="317.0">4.4879</text>
-<text x="584.7" y="570.0" transform="translate(584.6666666666667,570) rotate(90)">2020-12-28</text>
-<rect x="610.3" y="275.4" width="15.7" height="294.6" fill="#f00" stroke="#000" />
-<text x="610.3" y="275.4">4.5051</text>
-<text x="610.3" y="570.0" transform="translate(610.3333333333334,570) rotate(90)">2020-12-29</text>
-<rect x="636.0" y="221.9" width="15.7" height="348.1" fill="#f00" stroke="#000" />
-<text x="636.0" y="221.9">4.5272</text>
-<text x="636.0" y="570.0" transform="translate(636.0,570) rotate(90)">2020-12-30</text>
-<rect x="661.7" y="10.0" width="15.7" height="560.0" fill="#f00" stroke="#000" />
-<text x="661.7" y="10.0">4.6148</text>
-<text x="661.7" y="570.0" transform="translate(661.6666666666666,570) rotate(90)">2020-12-31</text>
-<rect x="687.3" y="170.4" width="15.7" height="399.6" fill="#f00" stroke="#000" />
-<text x="687.3" y="170.4">4.5485</text>
-<text x="687.3" y="570.0" transform="translate(687.3333333333333,570) rotate(90)">2021-01-04</text>
-<rect x="713.0" y="179.8" width="15.7" height="390.2" fill="#f00" stroke="#000" />
-<text x="713.0" y="179.8">4.5446</text>
-<text x="713.0" y="570.0" transform="translate(712.9999999999999,570) rotate(90)">2021-01-05</text>
-<rect x="738.7" y="294.3" width="15.7" height="275.7" fill="#f00" stroke="#000" />
-<text x="738.7" y="294.3">4.4973</text>
-<text x="738.7" y="570.0" transform="translate(738.6666666666665,570) rotate(90)">2021-01-07</text>
-<rect x="764.3" y="242.0" width="15.7" height="328.0" fill="#f00" stroke="#000" />
-<text x="764.3" y="242.0">4.5189</text>
-<text x="764.3" y="570.0" transform="translate(764.3333333333331,570) rotate(90)">2021-01-08</text>
+<rect x="20.0" y="335.7" width="54.2" height="234.3" fill="#f00" stroke="#000" />
+<text x="20.0" y="335.7">4.5149</text>
+<text x="20.0" y="570.0" transform="rotate(-90, 20,570)">2020-12-21</text>
+<rect x="84.2" y="361.8" width="54.2" height="208.2" fill="#f00" stroke="#000" />
+<text x="84.2" y="361.8">4.5069</text>
+<text x="84.2" y="570.0" transform="rotate(-90, 84.16666666666666,570)">2020-12-22</text>
+<rect x="148.3" y="378.1" width="54.2" height="191.9" fill="#f00" stroke="#000" />
+<text x="148.3" y="378.1">4.5019</text>
+<text x="148.3" y="570.0" transform="rotate(-90, 148.33333333333331,570)">2020-12-23</text>
+<rect x="212.5" y="356.9" width="54.2" height="213.1" fill="#f00" stroke="#000" />
+<text x="212.5" y="356.9">4.5084</text>
+<text x="212.5" y="570.0" transform="rotate(-90, 212.49999999999997,570)">2020-12-24</text>
+<rect x="276.7" y="423.7" width="54.2" height="146.3" fill="#f00" stroke="#000" />
+<text x="276.7" y="423.7">4.4879</text>
+<text x="276.7" y="570.0" transform="rotate(-90, 276.66666666666663,570)">2020-12-28</text>
+<rect x="340.8" y="367.6" width="54.2" height="202.4" fill="#f00" stroke="#000" />
+<text x="340.8" y="367.6">4.5051</text>
+<text x="340.8" y="570.0" transform="rotate(-90, 340.83333333333326,570)">2020-12-29</text>
+<rect x="405.0" y="295.6" width="54.2" height="274.4" fill="#f00" stroke="#000" />
+<text x="405.0" y="295.6">4.5272</text>
+<text x="405.0" y="570.0" transform="rotate(-90, 404.9999999999999,570)">2020-12-30</text>
+<rect x="469.2" y="10.0" width="54.2" height="560.0" fill="#f00" stroke="#000" />
+<text x="469.2" y="10.0">4.6148</text>
+<text x="469.2" y="570.0" transform="rotate(-90, 469.1666666666665,570)">2020-12-31</text>
+<rect x="533.3" y="226.1" width="54.2" height="343.9" fill="#f00" stroke="#000" />
+<text x="533.3" y="226.1">4.5485</text>
+<text x="533.3" y="570.0" transform="rotate(-90, 533.3333333333331,570)">2021-01-04</text>
+<rect x="597.5" y="238.9" width="54.2" height="331.1" fill="#f00" stroke="#000" />
+<text x="597.5" y="238.9">4.5446</text>
+<text x="597.5" y="570.0" transform="rotate(-90, 597.4999999999998,570)">2021-01-05</text>
+<rect x="661.7" y="393.1" width="54.2" height="176.9" fill="#f00" stroke="#000" />
+<text x="661.7" y="393.1">4.4973</text>
+<text x="661.7" y="570.0" transform="rotate(-90, 661.6666666666664,570)">2021-01-07</text>
+<rect x="725.8" y="322.6" width="54.2" height="247.4" fill="#f00" stroke="#000" />
+<text x="725.8" y="322.6">4.5189</text>
+<text x="725.8" y="570.0" transform="rotate(-90, 725.833333333333,570)">2021-01-08</text>
 </svg>

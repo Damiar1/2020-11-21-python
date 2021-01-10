@@ -26,14 +26,13 @@ def rysuj_wykres(dane, nazwapliku):
         y = ODSTEP + wysokosc_max - wysokosc
         f.write(f'<rect x="{x:.1f}" y="{y:.1f}" width="{szer:.1f}" height="{wysokosc:.1f}" fill="#f00" stroke="#000" />\n')
         f.write(f'<text x="{x:.1f}" y="{y:.1f}">{wartosc}</text>\n')
-        # FIXME poprawić obracanie
-        f.write(f'<text x="{x:.1f}" y="{ODSTEP+wysokosc_max:.1f}" transform="translate({x},{ODSTEP+wysokosc_max}) rotate(90)">{etykieta}</text>\n')
+        f.write(f'<text x="{x:.1f}" y="{ODSTEP+wysokosc_max:.1f}" transform="rotate(-90, {x},{ODSTEP+wysokosc_max})">{etykieta}</text>\n')
         x+=szer+ODSTEP
     f.write('</svg>')
 
 #waluta = input("Podaj kod waluty: ")
 waluta = "EUR"
-ile = 30
+ile = 12
 
 url = URL % ( waluta, ile )
 
