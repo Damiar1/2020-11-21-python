@@ -5,7 +5,7 @@
 napis = "Ala ma kota"
 
 for s in samogloski(napis):
-    print("* s")
+    print(f"* {s}")
 
 # ma wyświetlić:
 # * A
