@@ -1,11 +1,10 @@
 # dopisać generator kazdy_z_kazdym()
 
 def kazdy_z_kazdym(zawodnicy):
-    for i in range(len(zawodnicy)):
-        grupa = zawodnicy[i+1:]
-        zawodnik1 = zawodnicy[i]
-        for zawodnik2 in grupa:
-            yield zawodnik1, zawodnik2
+    for n1, z1 in enumerate(zawodnicy):
+        for n2, z2 in enumerate(zawodnicy):
+            if n1 < n2:
+                yield z1, z2
 
 zawodnicy = ["Mateusz", "Maciej", "Piotr", "Dariusz", "Andrzej"]
 
