@@ -13,3 +13,9 @@ No i to tyle
 I wypisze je na liście:
 * m.adamowski@alx.pl
 * ...*itd*
+
+# zadanie 2
+Wypisać osobno nazwę skrzynki i domenę. (Używając regexp)
+* m.adamowski alx.pl
+* admin gmail.com
+* *itd*
