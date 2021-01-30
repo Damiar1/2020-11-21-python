@@ -23,3 +23,11 @@ class Abc():
         """
         self.x = x
 
+#print(f"Nazwa: {__name__}")
+#print("No hej! Jestem abecadło")
+
+if __name__ == '__main__':
+    print("Uruchomiono jako program!")
+else:
+    # siedzę cicho, bo tylko zaimportowano moduł
+    pass
