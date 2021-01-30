@@ -13,3 +13,9 @@ wzorzec = re.compile(r'[-\w.]+@[-\w.]+')
 # w findall (i innych) można podać albo string z regexpem, albo już skompilowany regexp
 for x in re.findall(wzorzec, napis):
     print(f"* {x}")
+
+# Druga część
+wzorzec = re.compile(r'(([-\w.]+)@([-\w.]+))')
+# w findall (i innych) można podać albo string z regexpem, albo już skompilowany regexp
+for adres, skrzynka, domena in re.findall(wzorzec, napis):
+    print(f"* {skrzynka} at {domena}    ({adres})")
