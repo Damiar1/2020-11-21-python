@@ -2,7 +2,8 @@ from .geometria import Dlugosc
 
 # testy pytest
 # instalacja pytest: py -m pip install pytest
-
+# instalacja pytest: py -m pip install pytest-html
+#
 # uruchomienie testów:
 #  pytest
 # wygenerowanie raportu HTML
@@ -20,6 +21,25 @@ def test__wartosc_z_jednostka_liczba_z_jednostka_str_dlugosc_krotki():
 
 def test__wartosc_z_jednostka_liczba_z_jednostka_str_zawartosc_krotki():
     assert Dlugosc._wartosc_z_jednostka("1m") == (1, "m")
+
+def test__wartosc_z_jednostka_001():
+    assert Dlugosc._wartosc_z_jednostka("1km") == (1, "km")
+
+def test__wartosc_z_jednostka_002():
+    assert Dlugosc._wartosc_z_jednostka("1mi") == (1, "mi")
+
+def test__wartosc_z_jednostka_003():
+    assert Dlugosc._wartosc_z_jednostka("1.5cm") == (1.5, "cm")
+
+def test__wartosc_z_jednostka_004():
+    assert Dlugosc._wartosc_z_jednostka("-1.5mm") == (-1.5, "mm")
+
+def test__wartosc_z_jednostka_005():
+    assert Dlugosc._wartosc_z_jednostka("-1.5 mm") == (-1.5, "mm")
+
+def test__wartosc_z_jednostka_006():
+    assert Dlugosc._wartosc_z_jednostka(" -1.5 mm") == (-1.5, "mm")
+
 
 def test__xyz():
     d1 = Dlugosc(1, 'm')
