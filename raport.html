@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>raport.html</h1>
-    <p>Report generated on 31-Jan-2021 at 10:00:50 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 31-Jan-2021 at 10:21:08 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -259,8 +259,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.8.5</td></tr></table>
     <h2>Summary</h2>
-    <p>5 tests ran in 0.61 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>13 tests ran in 1.07 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">13 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -271,29 +271,11 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">nauka/test_dlugosc.py::test__wartosc_z_jednostka_liczba_z_jednostka_str_zawartosc_krotki</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">def test__wartosc_z_jednostka_liczba_z_jednostka_str_zawartosc_krotki():<br/>&gt;       assert Dlugosc._wartosc_z_jednostka(&quot;1m&quot;) == (1, &quot;m&quot;)<br/><span class="error">E       AssertionError: assert (0, 0) == (1, &#x27;m&#x27;)</span><br/><span class="error">E         At index 0 diff: 0 != 1</span><br/><span class="error">E         Use -v to get the full diff</span><br/><br/>nauka\test_dlugosc.py:17: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">nauka/test_dlugosc.py::test__xyz</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">def test__xyz():<br/>        d1 = Dlugosc(1, &#x27;m&#x27;)<br/>        d2 = Dlugosc(&#x27;1m&#x27;)<br/>&gt;       assert d1 == d2<br/><br/>nauka\test_dlugosc.py:22: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>nauka\geometria.py:28: in __eq__<br/>    return self.wartosc_w_m == other.wartosc_w_m<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = Dlugosc(&#x27;1m&#x27;, None)<br/><br/>    @property<br/>    def wartosc_w_m(self):<br/>&gt;       return self._wartosc_liczbowa * self.przeliczniki[self._jednostka]<br/><span class="error">E       KeyError: None</span><br/><br/>nauka\geometria.py:64: KeyError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">nauka/test_dlugosc.py::test_sprawdz_konstruktor_liczba_int_i_jednostka_str</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -311,7 +293,97 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">nauka/test_dlugosc.py::test__wartosc_z_jednostka_liczba_z_jednostka_str_dlugosc_krotki</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">nauka/test_dlugosc.py::test__wartosc_z_jednostka_liczba_z_jednostka_str_zawartosc_krotki</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">nauka/test_dlugosc.py::test__wartosc_z_jednostka_001</td>
+          <td class="col-duration">0.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">nauka/test_dlugosc.py::test__wartosc_z_jednostka_002</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">nauka/test_dlugosc.py::test__wartosc_z_jednostka_003</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">nauka/test_dlugosc.py::test__wartosc_z_jednostka_004</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">nauka/test_dlugosc.py::test__wartosc_z_jednostka_005</td>
           <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">nauka/test_dlugosc.py::test__wartosc_z_jednostka_006</td>
+          <td class="col-duration">0.04</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">nauka/test_dlugosc.py::test__konstruktora_001</td>
+          <td class="col-duration">0.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">nauka/test_dlugosc.py::test__konstruktora_002</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">nauka/test_dlugosc.py::test_porownywanie_001</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">

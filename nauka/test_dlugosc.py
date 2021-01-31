@@ -40,9 +40,13 @@ def test__wartosc_z_jednostka_005():
 def test__wartosc_z_jednostka_006():
     assert Dlugosc._wartosc_z_jednostka(" -1.5 mm") == (-1.5, "mm")
 
-
-def test__xyz():
+def test__konstruktora_001():
     d1 = Dlugosc(1, 'm')
     d2 = Dlugosc('1m')
     assert d1 == d2
 
+def test__konstruktora_002():
+    assert Dlugosc('10km') + Dlugosc('20km') == Dlugosc('30km')
+
+def test_porownywanie_001():
+    assert Dlugosc('1km') < Dlugosc('1mi')

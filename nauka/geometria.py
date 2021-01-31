@@ -12,9 +12,8 @@ class Dlugosc:
         'ft': 0.304_8
     }
     def __init__(self, wartosc_liczbowa, jednostka=None):
-#        if type(wartosc_liczbowa) == str:
-#            wz = re.compile(r'([^a-zA-z]+)([a-zA-Z]+)')
-#            wz.match(wartosc_liczbowa).groups()
+        if type(wartosc_liczbowa) == str:
+            wartosc_liczbowa, jednostka = __class__._wartosc_z_jednostka(wartosc_liczbowa)
         self._wartosc_liczbowa = wartosc_liczbowa
         self._jednostka = jednostka
 
