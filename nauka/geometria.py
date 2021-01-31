@@ -21,7 +21,8 @@ class Dlugosc:
     @staticmethod
     def _wartosc_z_jednostka(wartosc_z_jednostka):
         wz = re.compile(r'([^a-zA-z]+)([a-zA-Z]+)')
-        return wz.match(wartosc_z_jednostka).groups()
+        liczba, jednostka = wz.match(wartosc_z_jednostka).groups()
+        return float(liczba), jednostka
 
     def __gt__(self, other):
         return self.wartosc_w_m > other.wartosc_w_m
