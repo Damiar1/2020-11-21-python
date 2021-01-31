@@ -3,6 +3,11 @@ from .geometria import Dlugosc
 # testy pytest
 # instalacja pytest: py -m pip install pytest
 
+# uruchomienie testów:
+#  pytest
+# wygenerowanie raportu HTML
+#  pytest --html=plik.html
+
 def test_sprawdz_konstruktor_liczba_int_i_jednostka_str():
     d1 = Dlugosc(1, 'm')
     assert type(d1) == Dlugosc
