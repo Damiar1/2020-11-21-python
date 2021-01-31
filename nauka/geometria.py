@@ -20,8 +20,9 @@ class Dlugosc:
 
     @staticmethod
     def _wartosc_z_jednostka(wartosc_z_jednostka):
+        wz = re.compile(r'([^a-zA-z]+)([a-zA-Z]+)')
+        return wz.match(wartosc_z_jednostka).groups()
 
-        return (0,0)
     def __gt__(self, other):
         return self.wartosc_w_m > other.wartosc_w_m
     def __eq__(self, other):
