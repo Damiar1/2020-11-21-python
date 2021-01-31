@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Mój superblog</title>
+    <title>{{ category.name }} - Mój superblog</title>
 </head>
 <body>
     <h1>Mój superblog</h1>
@@ -12,6 +12,7 @@
         [{{cat.name}}]
         {% endfor %}
     </div>
+    <p>Wpisy w kategorii <b>{{ category.name }}</b>:</p>
     <div>
         {% for article in articles %}
         <h3>{{article.title}}</h3>
