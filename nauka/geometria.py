@@ -1,3 +1,5 @@
+import re
+
 class Dlugosc:
     przeliczniki = {
         'm': 1,
@@ -9,9 +11,17 @@ class Dlugosc:
         'mi': 1_609.344,
         'ft': 0.304_8
     }
-    def __init__(self, wartosc_liczbowa, jednostka):
+    def __init__(self, wartosc_liczbowa, jednostka=None):
+#        if type(wartosc_liczbowa) == str:
+#            wz = re.compile(r'([^a-zA-z]+)([a-zA-Z]+)')
+#            wz.match(wartosc_liczbowa).groups()
         self._wartosc_liczbowa = wartosc_liczbowa
         self._jednostka = jednostka
+
+    @staticmethod
+    def _wartosc_z_jednostka(wartosc_z_jednostka):
+
+        return (0,0)
     def __gt__(self, other):
         return self.wartosc_w_m > other.wartosc_w_m
     def __eq__(self, other):
